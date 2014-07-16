@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BWU FontAwesome IconSet</title>
+
+    <script src="packages/web_components/platform.js"></script>
+    <script src="packages/web_components/dart_support.js"></script>
+
+    <link rel="import" href="packages/core_elements/core_iconset_svg.html">
+    <link rel="import" href="packages/core_elements/core_toolbar.html">
+    <link rel="import" href="packages/core_elements/core_item.html">
+    <link rel="import" href="packages/core_elements/core_icon.html">
+    <link rel="import" href="packages/paper_elements/paper_menu_button.html">
+    <link rel="import" href="packages/bwu_fontawesome_iconset/bwu_fontawesome_iconset.html">
+
+    <style>
+      * /deep/ core-icon g#glass, core-icon g#glass {
+        fill: lightblue;
+        stroke: blue;
+        opacity: 0.5;
+      }
+
+      * /deep/ core-icon g#adjust, core-icon g#adjust {
+        fill: gray;
+      }
+
+      * /deep/ core-icon g#save, core-icon g#save {
+        fill: #000088;
+      }
+
+      * /deep/ core-icon g#list, core-icon g#list {
+        fill: #88cc44;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <p id="text"></p>
+
+    <bwu-fontawesome-iconset></bwu-fontawesome-iconset>
+
+    <core-icon icon="fa:glass"></core-icon>
+    <core-icon icon="fa:list"></core-icon>
+    <core-icon icon="fa:save"></core-icon>
+    <core-icon icon="fa:adjust"></core-icon>
+
+    <core-toolbar id="mainheader">
+      <paper-menu-button icon="fa:list">
+        <core-item label="Visibility" icon="fa:glass"></core-item>
+        <core-item label="Extension" icon="fa:adjust"></core-item>
+        <core-item label="Info" icon="fa:save"></core-item>
+      </paper-menu-button>
+      &lt;= click me
+    </core-toolbar>
+
+    <script type="application/dart">export 'package:polymer/init.dart';</script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
