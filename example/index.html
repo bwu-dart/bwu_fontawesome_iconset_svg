@@ -14,7 +14,8 @@
     <link rel="import" href="packages/core_elements/core_item.html">
     <link rel="import" href="packages/core_elements/core_icon.html">
     <link rel="import" href="packages/paper_elements/paper_menu_button.html">
-    <link rel="import" href="packages/bwu_fontawesome_iconset/bwu_fontawesome_iconset.html">
+    <link rel="import" href="packages/bwu_fontawesome_iconset_svg/bwu_fontawesome_iconset_svg.html">
+    <link rel="import" href="some_component.html">
 
     <style>
       * /deep/ core-icon g#glass, core-icon g#glass {
@@ -41,7 +42,7 @@
   <body>
     <p id="text"></p>
 
-    <bwu-fontawesome-iconset></bwu-fontawesome-iconset>
+    <bwu-fontawesome-iconset-svg></bwu-fontawesome-iconset-svg>
 
     <core-icon icon="fa:glass"></core-icon>
     <core-icon icon="fa:list"></core-icon>
@@ -56,6 +57,8 @@
       </paper-menu-button>
       &lt;= click me
     </core-toolbar>
+
+    <some-component></some-component>
 
     <script type="application/dart">export 'package:polymer/init.dart';</script>
     <script src="packages/browser/dart.js"></script>
