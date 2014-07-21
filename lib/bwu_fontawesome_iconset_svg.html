@@ -4,16 +4,29 @@
   @font-face {
     font-family: 'FontAwesome';
     src: url('font-awesome-4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0');
-    src: url('font-awesome-4.1.0/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('font-awesome-4.1.0/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('font-awesome-4.1.0/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('font-awesome-4.1.0/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');    font-weight: normal;
+    src: url('font-awesome-4.1.0/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
+         url('font-awesome-4.1.0/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),
+         url('font-awesome-4.1.0/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
+         url('font-awesome-4.1.0/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+    font-weight: normal;
     font-style: normal;
   }
 
-  * /deep/ core-icon text.bwu-fa-icon, core-icon text.bwu-fa-icon {
+  * /deep/ core-icon text.bwu-fa-icon {
     font-family: 'FontAwesome';
     font-size: 24px;
     dominant-baseline: central;
     text-anchor: middle;
   }
+
+  /* Firefox ignores the second selector if it doesn't understand the first one, therefore I have to duplicate this style here */
+  core-icon text.bwu-fa-icon {
+    font-family: 'FontAwesome';
+    font-size: 24px;
+    dominant-baseline: central;
+    text-anchor: middle;
+  }
+
 </style>
 
 <link rel="import" href="../../packages/polymer/polymer.html">
