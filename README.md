@@ -15,5 +15,4 @@
 
 ```
 
-## Limited browser support
-IE, Firefox, Opera Mini don't support SVG fonts. See http://caniuse.com/svg-fonts for more details)
+[This example in the GitHub repository](https://github.com/bwu-dart/bwu_fontawesom_iconset_svg/tree/master/example) shows more details how to use bwu_fontawesome_iconset_svg
