@@ -15,4 +15,4 @@
 
 ```
 
-[This example in the GitHub repository](https://github.com/bwu-dart/bwu_fontawesom_iconset_svg/tree/master/example) shows more details how to use bwu_fontawesome_iconset_svg
+[This example in the GitHub repository](https://github.com/bwu-dart/bwu_fontawesome_iconset_svg/tree/master/example) shows more details how to use bwu_fontawesome_iconset_svg

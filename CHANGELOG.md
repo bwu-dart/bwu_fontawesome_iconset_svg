@@ -1,3 +1,5 @@
+##0.0.3
+- fix type in GitHub repository name
 ##0.0.2
 - fix issues with import paths
 - embed FontAwesome files instead of loading from CDN (because of CORS issue
