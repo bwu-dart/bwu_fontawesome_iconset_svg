@@ -12,7 +12,7 @@ packages:
   barback:
     description: barback
     source: hosted
-    version: "0.14.2"
+    version: "0.15.0"
   browser:
     description: browser
     source: hosted
@@ -20,7 +20,7 @@ packages:
   code_transformers:
     description: code_transformers
     source: hosted
-    version: "0.2.0+1"
+    version: "0.2.0+3"
   collection:
     description: collection
     source: hosted
@@ -28,7 +28,7 @@ packages:
   core_elements:
     description: core_elements
     source: hosted
-    version: "0.1.0+1"
+    version: "0.1.1"
   csslib:
     description: csslib
     source: hosted
@@ -44,7 +44,7 @@ packages:
   observe:
     description: observe
     source: hosted
-    version: "0.11.0+2"
+    version: "0.11.0+4"
   paper_elements:
     description: paper_elements
     source: hosted
@@ -56,7 +56,7 @@ packages:
   polymer:
     description: polymer
     source: hosted
-    version: "0.12.0+3"
+    version: "0.12.0+5"
   polymer_expressions:
     description: polymer_expressions
     source: hosted
@@ -76,7 +76,7 @@ packages:
   source_maps:
     description: source_maps
     source: hosted
-    version: "0.9.3"
+    version: "0.10.0"
   source_span:
     description: source_span
     source: hosted

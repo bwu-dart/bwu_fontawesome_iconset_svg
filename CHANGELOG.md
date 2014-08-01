@@ -1,6 +1,6 @@
 ##0.0.5
-- update to Polymer 0.12.0+3
-- update to core_elements 0.1.0+1
+- update to Polymer 0.12.0+5
+- update to core_elements 0.1.1
 - update to paper_elements 0.1.0+2
 
 ##0.0.4
