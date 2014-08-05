@@ -1,3 +1,6 @@
+##0.0.5+1
+- fix homepage URL in pubspec.yaml
+
 ##0.0.5
 - update to Polymer 0.12.0+5
 - update to core_elements 0.1.1
