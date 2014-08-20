@@ -1,4 +1,7 @@
 ##0.0.5+1
+- example03 that shows how to set style attributes for `<core-icon>` in Dart code. 
+
+##0.0.5+1
 - fix homepage URL in pubspec.yaml
 
 ##0.0.5
