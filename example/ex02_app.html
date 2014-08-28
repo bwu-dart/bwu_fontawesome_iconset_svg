@@ -2,6 +2,7 @@
 
 <link rel="import" href="packages/paper_elements/paper_icon_button.html">
 <link rel="import" href="packages/bwu_fontawesome_iconset_svg/bwu_fontawesome_iconset_svg.html">
+<link rel="import" href="some_component.html">
 
 <polymer-element name="ex02-app">
   <template>
@@ -11,13 +12,13 @@
       }
     </style>
     <p id="text">BWU Fontawesome Iconset SVG - Example 2</p>
-    <p>Set icon style attributes in Dart code.
+    <p>Set icon style attributes in Dart code.</p>
 
     <bwu-fontawesome-iconset-svg></bwu-fontawesome-iconset-svg>
 
     <paper-icon-button id="bookmark-button" icon="fa:glass"></paper-icon-button>
 
-    <some-component></some-component>
+    <some-component id="some-component"></some-component>
   </template>
   <script type="application/dart" src="ex02_app.dart"></script>
 </polymer-element>

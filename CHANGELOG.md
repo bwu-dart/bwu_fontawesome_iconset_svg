@@ -1,5 +1,10 @@
+##0.0.6
+- update to Polymer 0.13.0
+- setting width and height style on core-icon now resizes the icon accordingly
+(JavaScript change landed in Dart core-elements)
+
 ##0.0.5+1
-- example03 that shows how to set style attributes for `<core-icon>` in Dart code. 
+- example03 that shows how to set style attributes for `<core-icon>` in Dart code.
 
 ##0.0.5+1
 - fix homepage URL in pubspec.yaml

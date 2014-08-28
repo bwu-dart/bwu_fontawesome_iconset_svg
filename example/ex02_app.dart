@@ -11,11 +11,22 @@ class Ex02App extends PolymerElement {
   attached() {
     super.attached();
 
+// Doesn't work in Firefox yet
 //    ($['bookmark-button'] as dom.Element).querySelector('* /deep/ #icon').style
-// the above version doesn't work in Firefox
+//      ..setProperty('fill', 'red')
+//      ..setProperty('stroke', 'blue')
+//      ..setProperty('stroke-with', '3px');
+
+
     ($['bookmark-button'] as dom.Element).shadowRoot.olderShadowRoot.querySelector('#icon').style
         ..setProperty('fill', 'red')
         ..setProperty('stroke', 'blue')
         ..setProperty('stroke-with', '3px');
+
+    ($['some-component'] as dom.Element).shadowRoot.querySelector('core-icon').style
+      ..setProperty('fill', 'red')
+      ..setProperty('stroke', 'blue')
+      ..setProperty('stroke-with', '3px');
+
   }
 }
