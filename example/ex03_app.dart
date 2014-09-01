@@ -14,7 +14,7 @@ class Ex03App extends PolymerElement {
 
   attached() {
     super.attached();
-    var icons = $['iconset'].shadowRoot.querySelector('svg').querySelectorAll('g');
-    iconNames.addAll(icons.map((i) => i.id));
+    List<dom.Element> icons = $['iconset'].shadowRoot.querySelector('svg').querySelectorAll('g');
+    iconNames.addAll(icons.map((i) => i.id).toList()..sort());
   }
 }
