@@ -9,7 +9,7 @@
 <!-- import once (only in the entry page) -->
 <link rel="import" href="packages/bwu_fontawesome_iconset_svg/bwu_fontawesome_iconset_svg.html">
 
-<!-- initialization once once (only in the entry page) -->
+<!-- initialization once (only in the entry page for example) -->
 <bwu-fontawesome-iconset></bwu-fontawesome-iconset>
 
 <!-- application -->
@@ -20,7 +20,7 @@
 
 * [This example source code in the GitHub repository](https://github.com/bwu-dart/bwu_fontawesome_iconset_svg/tree/master/example) shows more details how to use bwu_fontawesome_iconset_svg
 
-Live examples:
+##Live examples:
 
 - [Example 1](http://bwu-dart.github.io/bwu_fontawesome_iconset_svg/example/example01.html)
 - [Example 2](http://bwu-dart.github.io/bwu_fontawesome_iconset_svg/example/example02.html)
