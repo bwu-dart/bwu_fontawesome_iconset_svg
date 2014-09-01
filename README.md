@@ -1,4 +1,4 @@
-# BWU FontAwesome IconSetSvg for core-elements and paper-elements 
+# BWU FontAwesome IconSetSvg for core-elements and paper-elements
 
 ## Usage
 
@@ -18,4 +18,8 @@
 
 ```
 
-[This example in the GitHub repository](https://github.com/bwu-dart/bwu_fontawesome_iconset_svg/tree/master/example) shows more details how to use bwu_fontawesome_iconset_svg
+* [This example source code in the GitHub repository](https://github.com/bwu-dart/bwu_fontawesome_iconset_svg/tree/master/example) shows more details how to use bwu_fontawesome_iconset_svg
+
+- [Example 1](http://bwu-dart.github.io/bwu_fontawesome_iconset_svg/example/example01.html)
+- [Example 2](http://bwu-dart.github.io/bwu_fontawesome_iconset_svg/example/example01.html)
+- [Show all icons](http://bwu-dart.github.io/bwu_fontawesome_iconset_svg/example/example01.html)

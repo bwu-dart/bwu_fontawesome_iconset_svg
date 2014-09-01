@@ -1,3 +1,8 @@
+##0.0.6+1
+- added links to examples to `README.md`
+- added example03 to list all icons contained in the iconset
+- fixed #1 (type in width attribute)
+
 ##0.0.6
 - update to Polymer 0.13.0
 - setting width and height style on core-icon now resizes the icon accordingly

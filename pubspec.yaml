@@ -1,5 +1,5 @@
 name: bwu_fontawesome_iconset_svg
-version: 0.0.6
+version: 0.0.6+1
 description: FontAwesome SVG icons for core-elements and paper-elements
 homepage: https://github.com/bwu-dart/bwu_fontawesome_iconset_svg
 author: Günter Zöchbauer <guenter@gzoechbauer.com>
@@ -14,3 +14,4 @@ transformers:
     entry_points:
     - example/example01.html
     - example/example02.html
+    - example/example03.html
