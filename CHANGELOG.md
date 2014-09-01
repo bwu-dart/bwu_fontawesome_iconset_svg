@@ -1,4 +1,5 @@
-##0.0.7
+##0.0.6+2
+- fix links in README.md
 
 ##0.0.6+1
 - added links to examples to `README.md`
