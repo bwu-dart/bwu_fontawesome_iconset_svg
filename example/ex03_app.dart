@@ -7,8 +7,7 @@ import 'package:polymer/polymer.dart';
 @CustomTag('ex03-app')
 class Ex03App extends PolymerElement {
 
-  Ex03App.created() : super.created() {
-  }
+  Ex03App.created() : super.created();
 
   @observable
   List iconNames = toObservable([]);

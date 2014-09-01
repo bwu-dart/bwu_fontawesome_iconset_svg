@@ -1,3 +1,5 @@
+##0.0.7
+
 ##0.0.6+1
 - added links to examples to `README.md`
 - added example03 to list all icons contained in the iconset
