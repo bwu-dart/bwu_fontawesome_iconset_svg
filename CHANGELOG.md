@@ -1,3 +1,6 @@
+##0.0.7
+- update to Polymer 0.14.0
+
 ##0.0.6+2
 - fix links in README.md
 

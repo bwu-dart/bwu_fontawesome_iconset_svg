@@ -1,6 +1,6 @@
 packages
-.pub
-.idea
+.pub/
+.idea/
 build
 #pubspec.lock
 .project
