@@ -9,10 +9,6 @@
         display: block;
       }
 
-      body {
-        font-family: 'Helvetica Neue', Helvetica, Arial;
-      }
-
       h2 {
         text-transform: capitalize;
       }
@@ -29,22 +25,7 @@
       .set {
         padding: 1em 0;
         border-bottom: 1px solid silver;
-      }
-
-      .set:nth-of-type(4n-3) {
         color: #656565;
-      }
-
-      .set:nth-of-type(4n-2) {
-        color: #FDD835;
-      }
-
-      .set:nth-of-type(4n-1) {
-        color: #0D904F;
-      }
-
-      .set:nth-of-type(4n) {
-        color: #3B78E7;
       }
 
       .container {
@@ -56,7 +37,10 @@
         color: black;
       }
     </style>
-    <p id="text">BWU Fontawesome Iconset SVG - Example 3</p>
+    <h3>BWU Fontawesome Iconset SVG - Example 3</h3>
+    <ul>
+      <li><a href="http://polymer.github.io/core-icons/components/core-icons/demo.html" target="_blank">Polymer core-icons overview</a> </li>
+    </ul>
     <div class="set" horizontal wrap justified layout>
       <bwu-fontawesome-iconset-svg id="iconset"></bwu-fontawesome-iconset-svg>
       <template repeat="{{ icon in iconNames }}">

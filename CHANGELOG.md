@@ -1,3 +1,6 @@
+##0.0.8
+- widen dependency constrain on polymer, paper-elements, core-elements
+
 ##0.0.7
 - update to Polymer 0.14.0
 
