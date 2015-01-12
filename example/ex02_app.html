@@ -1,6 +1,7 @@
 <link rel="import" href="packages/polymer/polymer.html">
 
-<link rel="import" href="packages/paper_elements/paper_icon_button.html">
+<link rel="import" href="packages/core_elements/core_icon.html">
+<link rel="import" href="packages/paper_elements/paper_button.html">
 <link rel="import" href="packages/core_elements/social_icons.html">
 <link rel="import" href="packages/bwu_fontawesome_iconset_svg/bwu_fontawesome_iconset_svg.html">
 <link rel="import" href="some_component.html">
@@ -17,8 +18,8 @@
 
     <bwu-fontawesome-iconset-svg></bwu-fontawesome-iconset-svg>
 
-    <paper-icon-button id="bookmark-button" icon="fa:glass"></paper-icon-button>
-    <paper-icon-button id="other-button" icon="social:plus-one"></paper-icon-button>
+    <paper-button><core-icon id="bookmark-button" icon="fa:glass"></core-icon></paper-button>
+    <paper-button><core-icon id="other-button" icon="social:plus-one"></core-icon></paper-button>
 
     <some-component id="some-component"></some-component>
   </template>

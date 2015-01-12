@@ -1,5 +1,11 @@
+##0.1.0
+- widen dependency constraints for paper-elements and core-elements
+- remove script tags for dart.js, platform.js, and dart_support.js because they
+are inserted automatically by the transformer anyway.
+- update examples
+
 ##0.0.8
-- widen dependency constrain on polymer, paper-elements, core-elements
+- widen dependency constraints for polymer, paper-elements, core-elements
 
 ##0.0.7
 - update to Polymer 0.14.0
