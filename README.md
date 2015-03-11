@@ -5,7 +5,7 @@
 ```html
 <!-- in the head of the entry page add -->
 <meta charset="utf-8">
-<!-- !! this is mandatory for the FontAwesome SVG icons !! -->
+<!-- !! this is mandatory !! -->
 
 <!-- import once (only in the entry page) -->
 <link rel="import" href="packages/bwu_fontawesome_iconset_svg/bwu_fontawesome_iconset_svg.html">

@@ -1,3 +1,7 @@
+##0.1.1
+- widen dependency constraints for Polymer 0.16.0
+- use dartformat
+
 ##0.1.0
 - widen dependency constraints for paper-elements and core-elements
 - remove script tags for dart.js, platform.js, and dart_support.js because they
