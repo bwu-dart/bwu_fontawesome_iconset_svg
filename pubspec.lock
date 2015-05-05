@@ -4,11 +4,11 @@ packages:
   analyzer:
     description: analyzer
     source: hosted
-    version: "0.22.4"
+    version: "0.25.0+1"
   args:
     description: args
     source: hosted
-    version: "0.12.2+6"
+    version: "0.13.0"
   barback:
     description: barback
     source: hosted
@@ -24,7 +24,7 @@ packages:
   code_transformers:
     description: code_transformers
     source: hosted
-    version: "0.2.6"
+    version: "0.2.9"
   collection:
     description: collection
     source: hosted
@@ -32,31 +32,27 @@ packages:
   core_elements:
     description: core_elements
     source: hosted
-    version: "0.6.1"
+    version: "0.7.1+2"
   csslib:
     description: csslib
     source: hosted
-    version: "0.11.0+4"
-  custom_element_apigen:
-    description: custom_element_apigen
-    source: hosted
-    version: "0.1.4"
+    version: "0.12.0"
   dart_style:
     description: dart_style
     source: hosted
-    version: "0.1.3"
+    version: "0.1.8"
   glob:
     description: glob
     source: hosted
     version: "1.0.4"
-  html5lib:
-    description: html5lib
+  html:
+    description: html
     source: hosted
-    version: "0.12.0"
+    version: "0.12.1+1"
   initialize:
     description: initialize
     source: hosted
-    version: "0.5.1+3"
+    version: "0.6.1"
   logging:
     description: logging
     source: hosted
@@ -64,27 +60,31 @@ packages:
   matcher:
     description: matcher
     source: hosted
-    version: "0.11.4+3"
+    version: "0.11.4+4"
   observe:
     description: observe
     source: hosted
-    version: "0.13.0"
+    version: "0.13.1"
   paper_elements:
     description: paper_elements
     source: hosted
-    version: "0.6.2"
+    version: "0.7.1"
   path:
     description: path
     source: hosted
-    version: "1.3.3"
+    version: "1.3.5"
   polymer:
     description: polymer
     source: hosted
-    version: "0.16.0"
+    version: "0.16.3+1"
   polymer_expressions:
     description: polymer_expressions
     source: hosted
     version: "0.13.1"
+  polymer_interop:
+    description: polymer_interop
+    source: hosted
+    version: "0.1.0+2"
   pool:
     description: pool
     source: hosted
@@ -96,27 +96,27 @@ packages:
   smoke:
     description: smoke
     source: hosted
-    version: "0.2.1+1"
+    version: "0.3.3"
   source_maps:
     description: source_maps
     source: hosted
-    version: "0.10.0+1"
+    version: "0.10.1"
   source_span:
     description: source_span
     source: hosted
-    version: "1.0.3"
+    version: "1.1.2"
   stack_trace:
     description: stack_trace
     source: hosted
-    version: "1.2.4"
+    version: "1.3.2"
   string_scanner:
     description: string_scanner
     source: hosted
-    version: "0.1.3"
+    version: "0.1.3+1"
   template_binding:
     description: template_binding
     source: hosted
-    version: "0.14.0+1"
+    version: "0.14.0+2"
   utf:
     description: utf
     source: hosted
@@ -128,7 +128,7 @@ packages:
   web_components:
     description: web_components
     source: hosted
-    version: "0.10.5+2"
+    version: "0.11.4"
   when:
     description: when
     source: hosted
