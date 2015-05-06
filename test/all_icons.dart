@@ -1,11 +1,11 @@
-library bwu_fontawesome_iconset_svg.example.example03;
+library bwu_fontawesome_iconset_svg.test.all_icons_element;
 
 import 'dart:html' as dom;
 import 'package:polymer/polymer.dart';
 
-@CustomTag('ex03-app')
-class Ex03App extends PolymerElement {
-  Ex03App.created() : super.created();
+@CustomTag('all-icons')
+class AllIcons extends PolymerElement {
+  AllIcons.created() : super.created();
 
   @observable
   List iconNames = toObservable([]);

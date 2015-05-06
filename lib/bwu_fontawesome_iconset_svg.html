@@ -13,7 +13,7 @@
   }
 
   * /deep/ core-icon text.bwu-fa-icon {
-    font-family: 'FontAwesome';
+    font-family: "FontAwesome";
     font-size: 24px;
     dominant-baseline: central;
     text-anchor: middle;
@@ -21,7 +21,7 @@
 
   /* Firefox ignores the second selector if it doesn't understand the first one, therefore I have to duplicate this style here */
   core-icon text.bwu-fa-icon {
-    font-family: 'FontAwesome';
+    font-family: "FontAwesome";
     font-size: 24px;
     dominant-baseline: central;
     text-anchor: middle;
@@ -35,6 +35,11 @@
 <polymer-element name='bwu-fontawesome-iconset-svg' noscript>
   <template>
     <link rel="stylesheet" href="../../packages/bwu_fontawesome_iconset_svg/font-awesome-4.1.0/css/font-awesome.min.css">
+    <style>
+      :host {
+        display: none;
+      }
+    </style>
     <core-iconset-svg id="fa" iconSize="24">
       <svg width="24" height="24" viewBox="0 0 24 24" >
         <defs>

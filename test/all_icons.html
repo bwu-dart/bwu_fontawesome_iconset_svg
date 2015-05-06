@@ -1,0 +1,55 @@
+<link rel="import" href="packages/polymer/polymer.html">
+<link rel="import" href="packages/core_elements/core_icon.html">
+<link rel="import" href="packages/bwu_fontawesome_iconset_svg/bwu_fontawesome_iconset_svg.html">
+
+<polymer-element name="all-icons">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      h2 {
+        text-transform: capitalize;
+      }
+
+      core-icon {
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+      }
+
+      core-icon:hover {
+        fill: #fb8c00;
+      }
+
+      .set {
+        padding: 1em 0;
+        border-bottom: 1px solid silver;
+        color: #656565;
+      }
+
+      .container {
+        min-width: 10em;
+        padding: 1em;
+      }
+
+      .container > div {
+        color: black;
+      }
+    </style>
+    <h3>BWU Fontawesome Iconset SVG - Example 3</h3>
+    <ul>
+      <li><a href="http://polymer.github.io/core-icons/components/core-icons/demo.html" target="_blank">Polymer core-icons overview</a> </li>
+    </ul>
+    <div class="set" horizontal wrap justified layout>
+      <bwu-fontawesome-iconset-svg id="iconset"></bwu-fontawesome-iconset-svg>
+      <template repeat="{{ icon in iconNames }}">
+        <span class="container" vertical center layout>
+          <core-icon icon="fa:{{ icon }}"></core-icon>
+          <div>{{ icon }}</div>
+        </span>
+      </template>
+    </div>
+  </template>
+  <script type="application/dart" src="all_icons.dart"></script>
+</polymer-element>

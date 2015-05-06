@@ -33,6 +33,10 @@ packages:
     description: core_elements
     source: hosted
     version: "0.7.1+2"
+  crypto:
+    description: crypto
+    source: hosted
+    version: "0.9.0"
   csslib:
     description: csslib
     source: hosted
@@ -45,10 +49,22 @@ packages:
     description: glob
     source: hosted
     version: "1.0.4"
+  grinder:
+    description: grinder
+    source: hosted
+    version: "0.7.0"
   html:
     description: html
     source: hosted
     version: "0.12.1+1"
+  http_parser:
+    description: http_parser
+    source: hosted
+    version: "0.0.2+6"
+  http_server:
+    description: http_server
+    source: hosted
+    version: "0.9.5+1"
   initialize:
     description: initialize
     source: hosted
@@ -60,7 +76,11 @@ packages:
   matcher:
     description: matcher
     source: hosted
-    version: "0.11.4+4"
+    version: "0.12.0"
+  mime:
+    description: mime
+    source: hosted
+    version: "0.9.3"
   observe:
     description: observe
     source: hosted
@@ -84,15 +104,31 @@ packages:
   polymer_interop:
     description: polymer_interop
     source: hosted
-    version: "0.1.0+2"
+    version: "0.1.1"
   pool:
     description: pool
     source: hosted
     version: "1.0.1"
+  pub_semver:
+    description: pub_semver
+    source: hosted
+    version: "1.1.0"
   quiver:
     description: quiver
     source: hosted
-    version: "0.21.3"
+    version: "0.21.0"
+  shelf:
+    description: shelf
+    source: hosted
+    version: "0.6.1+1"
+  shelf_static:
+    description: shelf_static
+    source: hosted
+    version: "0.2.2"
+  shelf_web_socket:
+    description: shelf_web_socket
+    source: hosted
+    version: "0.0.1+2"
   smoke:
     description: smoke
     source: hosted
@@ -117,6 +153,10 @@ packages:
     description: template_binding
     source: hosted
     version: "0.14.0+2"
+  test:
+    description: test
+    source: hosted
+    version: "0.12.0"
   utf:
     description: utf
     source: hosted
