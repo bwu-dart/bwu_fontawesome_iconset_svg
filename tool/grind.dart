@@ -11,8 +11,8 @@ analyze() => new PubApp.global('tuneup').run(['check']);
 
 @Task('Runn all tests')
 // TODO(zoechi) make test work in Firefox
-test() =>
-    new PubApp.local('test').run(['-pdartium', /*'-pchrome', '-pfirefox', '-pphantomjs'*/]);
+test() => new PubApp.local('test')
+    .run(['-j1', '-pdartium', /*'-pchrome', '-pfirefox', '-pphantomjs'*/]);
 
 @Task('Check everything')
 @Depends(analyze, /*checkFormat,*/ lint, test)

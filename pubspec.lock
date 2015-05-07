@@ -28,7 +28,7 @@ packages:
   collection:
     description: collection
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   core_elements:
     description: core_elements
     source: hosted
@@ -112,7 +112,7 @@ packages:
   pub_semver:
     description: pub_semver
     source: hosted
-    version: "1.1.0"
+    version: "1.2.0"
   quiver:
     description: quiver
     source: hosted
