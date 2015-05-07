@@ -1,3 +1,7 @@
+##0.1.2
+- widen dependency constraints for core-elements 0.7.0
+- moved paper-elements to dev_dependencies
+
 ##0.1.1
 - widen dependency constraints for Polymer 0.16.0
 - use dartformat
