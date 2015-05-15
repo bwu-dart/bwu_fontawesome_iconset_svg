@@ -1,3 +1,6 @@
+##0.1.3
+- move `test` from `dev_dependencies` to `dependencies`.
+
 ##0.1.2
 - widen dependency constraints for core-elements 0.7.0
 - moved paper-elements to dev_dependencies
