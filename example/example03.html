@@ -1,0 +1,1594 @@
+<!DOCTYPE html><html><head><script src="packages/web_components/webcomponents.min.js"></script><script src="packages/web_components/dart_support.js"></script>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BWU FontAwesome IconSet - Example 3</title>
+
+    <style>
+      body *, body /deep/ * {
+        font-family: 'Helvetica Neue', Helvetica, Arial;
+        font-size: 11pt;
+      }
+    </style>
+    
+  </head>
+
+  <body><div hidden=""><style shim-shadowdom="">
+/*******************************
+          Flex Layout
+*******************************/
+
+html /deep/ [layout][horizontal], html /deep/ [layout][vertical] {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+html /deep/ [layout][horizontal][inline], html /deep/ [layout][vertical][inline] {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
+html /deep/ [layout][horizontal] {
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+html /deep/ [layout][horizontal][reverse] {
+  -ms-flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+html /deep/ [layout][vertical] {
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+html /deep/ [layout][vertical][reverse] {
+  -ms-flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+html /deep/ [layout][wrap] {
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+html /deep/ [layout][wrap-reverse] {
+  -ms-flex-wrap: wrap-reverse;
+  -webkit-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+html /deep/ [flex] {
+  -ms-flex: 1 1 0.000000001px;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-flex-basis: 0.000000001px;
+  flex-basis: 0.000000001px;
+}
+
+html /deep/ [vertical][layout] > [flex][auto-vertical], html /deep/ [vertical][layout]::shadow [flex][auto-vertical] {
+  -ms-flex: 1 1 auto;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+}
+
+html /deep/ [flex][auto] {
+  -ms-flex: 1 1 auto;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+}
+
+html /deep/ [flex][none] {
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
+}
+
+html /deep/ [flex][one] {
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+html /deep/ [flex][two] {
+  -ms-flex: 2;
+  -webkit-flex: 2;
+  flex: 2;
+}
+
+html /deep/ [flex][three] {
+  -ms-flex: 3;
+  -webkit-flex: 3;
+  flex: 3;
+}
+
+html /deep/ [flex][four] {
+  -ms-flex: 4;
+  -webkit-flex: 4;
+  flex: 4;
+}
+
+html /deep/ [flex][five] {
+  -ms-flex: 5;
+  -webkit-flex: 5;
+  flex: 5;
+}
+
+html /deep/ [flex][six] {
+  -ms-flex: 6;
+  -webkit-flex: 6;
+  flex: 6;
+}
+
+html /deep/ [flex][seven] {
+  -ms-flex: 7;
+  -webkit-flex: 7;
+  flex: 7;
+}
+
+html /deep/ [flex][eight] {
+  -ms-flex: 8;
+  -webkit-flex: 8;
+  flex: 8;
+}
+
+html /deep/ [flex][nine] {
+  -ms-flex: 9;
+  -webkit-flex: 9;
+  flex: 9;
+}
+
+html /deep/ [flex][ten] {
+  -ms-flex: 10;
+  -webkit-flex: 10;
+  flex: 10;
+}
+
+html /deep/ [flex][eleven] {
+  -ms-flex: 11;
+  -webkit-flex: 11;
+  flex: 11;
+}
+
+html /deep/ [flex][twelve] {
+  -ms-flex: 12;
+  -webkit-flex: 12;
+  flex: 12;
+}
+
+/* alignment in cross axis */
+
+html /deep/ [layout][start] {
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+html /deep/ [layout][center], html /deep/ [layout][center-center] {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+html /deep/ [layout][end] {
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+/* alignment in main axis */
+
+html /deep/ [layout][start-justified] {
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+html /deep/ [layout][center-justified], html /deep/ [layout][center-center] {
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+html /deep/ [layout][end-justified] {
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+html /deep/ [layout][around-justified] {
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+html /deep/ [layout][justified] {
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* self alignment */
+
+html /deep/ [self-start] {
+  -ms-align-self: flex-start;
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+}
+
+html /deep/ [self-center] {
+  -ms-align-self: center;
+  -webkit-align-self: center;
+  align-self: center;
+}
+
+html /deep/ [self-end] {
+  -ms-align-self: flex-end;
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+}
+
+html /deep/ [self-stretch] {
+  -ms-align-self: stretch;
+  -webkit-align-self: stretch;
+  align-self: stretch;
+}
+
+/*******************************
+          Other Layout
+*******************************/
+
+html /deep/ [block] {
+  display: block;
+}
+
+/* ie support for hidden */
+html /deep/ [hidden] {
+  display: none !important;
+}
+
+html /deep/ [relative] {
+  position: relative;
+}
+
+html /deep/ [fit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+body[fullbleed] {
+  margin: 0;
+  height: 100vh;
+}
+
+/*******************************
+            Other
+*******************************/
+
+html /deep/ [segment], html /deep/ segment {
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1em 0.5em;
+  padding: 1em;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px 5px 5px 5px;
+}
+
+</style>
+
+<script src="packages/polymer_interop/src/js/polymer.min.js"></script>
+
+<script>
+// This empty script tag is necessary to work around dartbug.com/19650
+</script>
+
+<script>
+// This empty script tag is necessary to work around dartbug.com/19650
+</script>
+
+<script src="packages/web_components/interop_support.js"></script>
+
+<!-- Dart note: load polymer for Dart and JS from the same place -->
+
+<script>
+// This empty script is here to workaround issue
+// https://github.com/dart-lang/core-elements/issues/11
+</script>
+
+
+<polymer-element name="core-meta" attributes="label type" hidden="">
+<script>
+
+  (function() {
+    
+    var SKIP_ID = 'meta';
+    var metaData = {}, metaArray = {};
+
+    Polymer('core-meta', {
+      
+      /**
+       * The type of meta-data.  All meta-data with the same type with be
+       * stored together.
+       * 
+       * @attribute type
+       * @type string
+       * @default 'default'
+       */
+      type: 'default',
+      
+      alwaysPrepare: true,
+      
+      ready: function() {
+        this.register(this.id);
+      },
+      
+      get metaArray() {
+        var t = this.type;
+        if (!metaArray[t]) {
+          metaArray[t] = [];
+        }
+        return metaArray[t];
+      },
+      
+      get metaData() {
+        var t = this.type;
+        if (!metaData[t]) {
+          metaData[t] = {};
+        }
+        return metaData[t];
+      },
+      
+      register: function(id, old) {
+        if (id && id !== SKIP_ID) {
+          this.unregister(this, old);
+          this.metaData[id] = this;
+          this.metaArray.push(this);
+        }
+      },
+      
+      unregister: function(meta, id) {
+        delete this.metaData[id || meta.id];
+        var i = this.metaArray.indexOf(meta);
+        if (i >= 0) {
+          this.metaArray.splice(i, 1);
+        }
+      },
+      
+      /**
+       * Returns a list of all meta-data elements with the same type.
+       * 
+       * @property list
+       * @type array
+       * @default []
+       */
+      get list() {
+        return this.metaArray;
+      },
+      
+      /**
+       * Retrieves meta-data by ID.
+       *
+       * @method byId
+       * @param {String} id The ID of the meta-data to be returned.
+       * @returns Returns meta-data.
+       */
+      byId: function(id) {
+        return this.metaData[id];
+      }
+      
+    });
+    
+  })();
+  
+</script>
+</polymer-element>
+
+
+<polymer-element name="core-iconset" extends="core-meta" attributes="src width icons iconSize">
+  
+  <script>
+  
+    Polymer('core-iconset', {
+  
+      /**
+       * The URL of the iconset image.
+       *
+       * @attribute src
+       * @type string
+       * @default ''
+       */
+      src: '',
+
+      /**
+       * The width of the iconset image. This must only be specified if the
+       * icons are arranged into separate rows inside the image.
+       *
+       * @attribute width
+       * @type number
+       * @default 0
+       */
+      width: 0,
+
+      /**
+       * A space separated list of names corresponding to icons in the iconset
+       * image file. This list must be ordered the same as the icon images
+       * in the image file.
+       *
+       * @attribute icons
+       * @type string
+       * @default ''
+       */
+      icons: '',
+
+      /**
+       * The size of an individual icon. Note that icons must be square.
+       *
+       * @attribute iconSize
+       * @type number
+       * @default 24
+       */
+      iconSize: 24,
+
+      /**
+       * The horizontal offset of the icon images in the inconset src image.
+       * This is typically used if the image resource contains additional images
+       * beside those intended for the iconset.
+       *
+       * @attribute offsetX
+       * @type number
+       * @default 0
+       */
+      offsetX: 0,
+      /**
+       * The vertical offset of the icon images in the inconset src image.
+       * This is typically used if the image resource contains additional images
+       * beside those intended for the iconset.
+       *
+       * @attribute offsetY
+       * @type number
+       * @default 0
+       */
+      offsetY: 0,
+      type: 'iconset',
+
+      created: function() {
+        this.iconMap = {};
+        this.iconNames = [];
+        this.themes = {};
+      },
+  
+      ready: function() {
+        // TODO(sorvell): ensure iconset's src is always relative to the main
+        // document
+        if (this.src && (this.ownerDocument !== document)) {
+          this.src = this.resolvePath(this.src, this.ownerDocument.baseURI);
+        }
+        this.super();
+        this.updateThemes();
+      },
+
+      iconsChanged: function() {
+        var ox = this.offsetX;
+        var oy = this.offsetY;
+        this.icons && this.icons.split(/\s+/g).forEach(function(name, i) {
+          this.iconNames.push(name);
+          this.iconMap[name] = {
+            offsetX: ox,
+            offsetY: oy
+          }
+          if (ox + this.iconSize < this.width) {
+            ox += this.iconSize;
+          } else {
+            ox = this.offsetX;
+            oy += this.iconSize;
+          }
+        }, this);
+      },
+
+      updateThemes: function() {
+        var ts = this.querySelectorAll('property[theme]');
+        ts && ts.array().forEach(function(t) {
+          this.themes[t.getAttribute('theme')] = {
+            offsetX: parseInt(t.getAttribute('offsetX')) || 0,
+            offsetY: parseInt(t.getAttribute('offsetY')) || 0
+          };
+        }, this);
+      },
+
+      // TODO(ffu): support retrived by index e.g. getOffset(10);
+      /**
+       * Returns an object containing `offsetX` and `offsetY` properties which
+       * specify the pixel locaion in the iconset's src file for the given
+       * `icon` and `theme`. It's uncommon to call this method. It is useful,
+       * for example, to manually position a css backgroundImage to the proper
+       * offset. It's more common to use the `applyIcon` method.
+       *
+       * @method getOffset
+       * @param {String|Number} icon The name of the icon or the index of the
+       * icon within in the icon image.
+       * @param {String} theme The name of the theme.
+       * @returns {Object} An object specifying the offset of the given icon 
+       * within the icon resource file; `offsetX` is the horizontal offset and
+       * `offsetY` is the vertical offset. Both values are in pixel units.
+       */
+      getOffset: function(icon, theme) {
+        var i = this.iconMap[icon];
+        if (!i) {
+          var n = this.iconNames[Number(icon)];
+          i = this.iconMap[n];
+        }
+        var t = this.themes[theme];
+        if (i && t) {
+          return {
+            offsetX: i.offsetX + t.offsetX,
+            offsetY: i.offsetY + t.offsetY
+          }
+        }
+        return i;
+      },
+
+      /**
+       * Applies an icon to the given element as a css background image. This
+       * method does not size the element, and it's often necessary to set 
+       * the element's height and width so that the background image is visible.
+       *
+       * @method applyIcon
+       * @param {Element} element The element to which the background is
+       * applied.
+       * @param {String|Number} icon The name or index of the icon to apply.
+       * @param {Number} scale (optional, defaults to 1) A scaling factor 
+       * with which the icon can be magnified.
+       * @return {Element} The icon element.
+       */
+      applyIcon: function(element, icon, scale) {
+        var offset = this.getOffset(icon);
+        scale = scale || 1;
+        if (element && offset) {
+          var icon = element._icon || document.createElement('div');
+          var style = icon.style;
+          style.backgroundImage = 'url(' + this.src + ')';
+          style.backgroundPosition = (-offset.offsetX * scale + 'px') + 
+             ' ' + (-offset.offsetY * scale + 'px');
+          style.backgroundSize = scale === 1 ? 'auto' :
+             this.width * scale + 'px';
+          if (icon.parentNode !== element) {
+            element.appendChild(icon);
+          }
+          return icon;
+        }
+      }
+
+    });
+
+  </script>
+
+</polymer-element>
+
+
+<style shim-shadowdom="">/* Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt */
+
+html /deep/ core-icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  fill: currentcolor;
+  position: relative;
+  height: 24px;
+  width: 24px;
+}</style>
+
+<polymer-element name="core-icon" attributes="src icon alt">
+<script>
+(function() {
+  
+  // mono-state
+  var meta;
+  
+  Polymer('core-icon', {
+
+    /**
+     * The URL of an image for the icon. If the src property is specified,
+     * the icon property should not be.
+     *
+     * @attribute src
+     * @type string
+     * @default ''
+     */
+    src: '',
+
+    /**
+     * Specifies the icon name or index in the set of icons available in
+     * the icon's icon set. If the icon property is specified,
+     * the src property should not be.
+     *
+     * @attribute icon
+     * @type string
+     * @default ''
+     */
+    icon: '',
+
+    /**
+     * Alternative text content for accessibility support.
+     * If alt is present and not empty, it will set the element's role to img and add an aria-label whose content matches alt.
+     * If alt is present and is an empty string, '', it will hide the element from the accessibility layer
+     * If alt is not present, it will set the element's role to img and the element will fallback to using the icon attribute for its aria-label.
+     * 
+     * @attribute alt
+     * @type string
+     * @default ''
+     */
+    alt: null,
+
+    observe: {
+      'icon': 'updateIcon',
+      'alt': 'updateAlt'
+    },
+
+    defaultIconset: 'icons',
+
+    ready: function() {
+      if (!meta) {
+        meta = document.createElement('core-iconset');
+      }
+
+      // Allow user-provided `aria-label` in preference to any other text alternative.
+      if (this.hasAttribute('aria-label')) {
+        // Set `role` if it has not been overridden.
+        if (!this.hasAttribute('role')) {
+          this.setAttribute('role', 'img');
+        }
+        return;
+      }
+      this.updateAlt();
+    },
+
+    srcChanged: function() {
+      var icon = this._icon || document.createElement('div');
+      icon.textContent = '';
+      icon.setAttribute('fit', '');
+      icon.style.backgroundImage = 'url(' + this.src + ')';
+      icon.style.backgroundPosition = 'center';
+      icon.style.backgroundSize = '100%';
+      if (!icon.parentNode) {
+        this.appendChild(icon);
+      }
+      this._icon = icon;
+    },
+
+    getIconset: function(name) {
+      return meta.byId(name || this.defaultIconset);
+    },
+
+    updateIcon: function(oldVal, newVal) {
+      if (!this.icon) {
+        this.updateAlt();
+        return;
+      }
+      var parts = String(this.icon).split(':');
+      var icon = parts.pop();
+      if (icon) {
+        var set = this.getIconset(parts.pop());
+        if (set) {
+          this._icon = set.applyIcon(this, icon);
+          if (this._icon) {
+            this._icon.setAttribute('fit', '');
+          }
+        }
+      }
+      // Check to see if we're using the old icon's name for our a11y fallback
+      if (oldVal) {
+        if (oldVal.split(':').pop() == this.getAttribute('aria-label')) {
+          this.updateAlt();
+        }
+      }
+    },
+
+    updateAlt: function() {
+      // Respect the user's decision to remove this element from
+      // the a11y tree
+      if (this.getAttribute('aria-hidden')) {
+        return;
+      }
+
+      // Remove element from a11y tree if `alt` is empty, otherwise
+      // use `alt` as `aria-label`.
+      if (this.alt === '') {
+        this.setAttribute('aria-hidden', 'true');
+        if (this.hasAttribute('role')) {
+          this.removeAttribute('role');
+        }
+        if (this.hasAttribute('aria-label')) {
+          this.removeAttribute('aria-label');
+        }
+      } else {
+        this.setAttribute('aria-label', this.alt ||
+                                        this.icon.split(':').pop());
+        if (!this.hasAttribute('role')) {
+          this.setAttribute('role', 'img');
+        }
+        if (this.hasAttribute('aria-hidden')) {
+          this.removeAttribute('aria-hidden');
+        }
+      }
+    }
+
+  });
+  
+})();
+</script>
+
+</polymer-element>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  @font-face {
+    font-family: 'FontAwesome';
+    src: url(packages/bwu_fontawesome_iconset_svg/font-awesome-4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0);
+    src: url(packages/bwu_fontawesome_iconset_svg/font-awesome-4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),
+         url(packages/bwu_fontawesome_iconset_svg/font-awesome-4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),
+         url(packages/bwu_fontawesome_iconset_svg/font-awesome-4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),
+         url(packages/bwu_fontawesome_iconset_svg/font-awesome-4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  * /deep/ core-icon text.bwu-fa-icon {
+    font-family: "FontAwesome";
+    font-size: 24px;
+    dominant-baseline: central;
+    text-anchor: middle;
+  }
+
+  /* Firefox ignores the second selector if it doesn't understand the first one, therefore I have to duplicate this style here */
+  core-icon text.bwu-fa-icon {
+    font-family: "FontAwesome";
+    font-size: 24px;
+    dominant-baseline: central;
+    text-anchor: middle;
+  }
+
+</style>
+
+
+
+
+<polymer-element name="core-iconset-svg" extends="core-meta" attributes="iconSize">
+
+  <script>
+
+    Polymer('core-iconset-svg', {
+
+
+      /**
+       * The size of an individual icon. Note that icons must be square.
+       *
+       * @attribute iconSize
+       * @type number
+       * @default 24
+       */
+      iconSize: 24,
+      type: 'iconset',
+
+      created: function() {
+        this._icons = {};
+      },
+
+      ready: function() {
+        this.super();
+        this.updateIcons();
+      },
+
+      iconById: function(id) {
+        return this._icons[id] || (this._icons[id] = this.querySelector('[id="' + id +'"]'));
+      },
+
+      cloneIcon: function(id) {
+        var icon = this.iconById(id);
+        if (icon) {
+          var content = icon.cloneNode(true);
+          content.removeAttribute('id');
+          var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+          svg.setAttribute('viewBox', '0 0 ' + this.iconSize + ' ' +
+              this.iconSize);
+          // NOTE(dfreedm): work around https://crbug.com/370136
+          svg.style.pointerEvents = 'none';
+          svg.appendChild(content);
+          return svg;
+        }
+      },
+
+      get iconNames() {
+        if (!this._iconNames) {
+          this._iconNames = this.findIconNames();
+        }
+        return this._iconNames;
+      },
+
+      findIconNames: function() {
+        var icons = this.querySelectorAll('[id]').array();
+        if (icons.length) {
+          return icons.map(function(n){ return n.id });
+        }
+      },
+
+      /**
+       * Applies an icon to the given element. The svg icon is added to the
+       * element's shadowRoot if one exists or directly to itself.
+       *
+       * @method applyIcon
+       * @param {Element} element The element to which the icon is
+       * applied.
+       * @param {String|Number} icon The name the icon to apply.
+       * @return {Element} The icon element
+       */
+      applyIcon: function(element, icon) {
+        var root = element;
+        // remove old
+        var old = root.querySelector('svg');
+        if (old) {
+          old.remove();
+        }
+        // install new
+        var svg = this.cloneIcon(icon);
+        if (!svg) {
+          return;
+        }
+        svg.setAttribute('height', '100%');
+        svg.setAttribute('width', '100%');
+        svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+        svg.style.display = 'block';
+        root.insertBefore(svg, root.firstElementChild);
+        return svg;
+      },
+      
+      /**
+       * Tell users of the iconset, that the set has loaded.
+       * This finds all elements matching the selector argument and calls 
+       * the method argument on them.
+       * @method updateIcons
+       * @param selector {string} css selector to identify iconset users, 
+       * defaults to '[icon]'
+       * @param method {string} method to call on found elements, 
+       * defaults to 'updateIcon'
+       */
+      updateIcons: function(selector, method) {
+        selector = selector || '[icon]';
+        method = method || 'updateIcon';
+        var deep = window.ShadowDOMPolyfill ? '' : 'html /deep/ ';
+        var i$ = document.querySelectorAll(deep + selector);
+        for (var i=0, e; e=i$[i]; i++) {
+          if (e[method]) {
+            e[method].call(e);
+          }
+        }
+      }
+      
+
+    });
+
+  </script>
+
+</polymer-element>
+
+
+
+
+
+
+
+
+
+
+<polymer-element name="bwu-fontawesome-iconset-svg" noscript="">
+  <template>
+    <style>/*!
+ *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */@font-face{font-family:'FontAwesome';src:url(packages/bwu_fontawesome_iconset_svg/font-awesome-4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0);src:url(packages/bwu_fontawesome_iconset_svg/font-awesome-4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),url(packages/bwu_fontawesome_iconset_svg/font-awesome-4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),url(packages/bwu_fontawesome_iconset_svg/font-awesome-4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),url(packages/bwu_fontawesome_iconset_svg/font-awesome-4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),url(packages/bwu_fontawesome_iconset_svg/font-awesome-4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');font-weight:normal;font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transform:translate(0, 0)}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-fw{width:1.28571429em;text-align:center}.fa-ul{padding-left:0;margin-left:2.14285714em;list-style-type:none}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em;text-align:center}.fa-li.fa-lg{left:-1.85714286em}.fa-border{padding:.2em .25em .15em;border:solid .08em #eee;border-radius:.1em}.pull-right{float:right}.pull-left{float:left}.fa.pull-left{margin-right:.3em}.fa.pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.fa-rotate-90{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);-webkit-transform:rotate(270deg);-ms-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);-webkit-transform:scale(-1, 1);-ms-transform:scale(-1, 1);transform:scale(-1, 1)}.fa-flip-vertical{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);-webkit-transform:scale(1, -1);-ms-transform:scale(1, -1);transform:scale(1, -1)}:root .fa-rotate-90,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-flip-horizontal,:root .fa-flip-vertical{filter:none}.fa-stack{position:relative;display:inline-block;width:2em;height:2em;line-height:2em;vertical-align:middle}.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}.fa-stack-1x{line-height:inherit}.fa-stack-2x{font-size:2em}.fa-inverse{color:#fff}.fa-glass:before{content:"\f000"}.fa-music:before{content:"\f001"}.fa-search:before{content:"\f002"}.fa-envelope-o:before{content:"\f003"}.fa-heart:before{content:"\f004"}.fa-star:before{content:"\f005"}.fa-star-o:before{content:"\f006"}.fa-user:before{content:"\f007"}.fa-film:before{content:"\f008"}.fa-th-large:before{content:"\f009"}.fa-th:before{content:"\f00a"}.fa-th-list:before{content:"\f00b"}.fa-check:before{content:"\f00c"}.fa-remove:before,.fa-close:before,.fa-times:before{content:"\f00d"}.fa-search-plus:before{content:"\f00e"}.fa-search-minus:before{content:"\f010"}.fa-power-off:before{content:"\f011"}.fa-signal:before{content:"\f012"}.fa-gear:before,.fa-cog:before{content:"\f013"}.fa-trash-o:before{content:"\f014"}.fa-home:before{content:"\f015"}.fa-file-o:before{content:"\f016"}.fa-clock-o:before{content:"\f017"}.fa-road:before{content:"\f018"}.fa-download:before{content:"\f019"}.fa-arrow-circle-o-down:before{content:"\f01a"}.fa-arrow-circle-o-up:before{content:"\f01b"}.fa-inbox:before{content:"\f01c"}.fa-play-circle-o:before{content:"\f01d"}.fa-rotate-right:before,.fa-repeat:before{content:"\f01e"}.fa-refresh:before{content:"\f021"}.fa-list-alt:before{content:"\f022"}.fa-lock:before{content:"\f023"}.fa-flag:before{content:"\f024"}.fa-headphones:before{content:"\f025"}.fa-volume-off:before{content:"\f026"}.fa-volume-down:before{content:"\f027"}.fa-volume-up:before{content:"\f028"}.fa-qrcode:before{content:"\f029"}.fa-barcode:before{content:"\f02a"}.fa-tag:before{content:"\f02b"}.fa-tags:before{content:"\f02c"}.fa-book:before{content:"\f02d"}.fa-bookmark:before{content:"\f02e"}.fa-print:before{content:"\f02f"}.fa-camera:before{content:"\f030"}.fa-font:before{content:"\f031"}.fa-bold:before{content:"\f032"}.fa-italic:before{content:"\f033"}.fa-text-height:before{content:"\f034"}.fa-text-width:before{content:"\f035"}.fa-align-left:before{content:"\f036"}.fa-align-center:before{content:"\f037"}.fa-align-right:before{content:"\f038"}.fa-align-justify:before{content:"\f039"}.fa-list:before{content:"\f03a"}.fa-dedent:before,.fa-outdent:before{content:"\f03b"}.fa-indent:before{content:"\f03c"}.fa-video-camera:before{content:"\f03d"}.fa-photo:before,.fa-image:before,.fa-picture-o:before{content:"\f03e"}.fa-pencil:before{content:"\f040"}.fa-map-marker:before{content:"\f041"}.fa-adjust:before{content:"\f042"}.fa-tint:before{content:"\f043"}.fa-edit:before,.fa-pencil-square-o:before{content:"\f044"}.fa-share-square-o:before{content:"\f045"}.fa-check-square-o:before{content:"\f046"}.fa-arrows:before{content:"\f047"}.fa-step-backward:before{content:"\f048"}.fa-fast-backward:before{content:"\f049"}.fa-backward:before{content:"\f04a"}.fa-play:before{content:"\f04b"}.fa-pause:before{content:"\f04c"}.fa-stop:before{content:"\f04d"}.fa-forward:before{content:"\f04e"}.fa-fast-forward:before{content:"\f050"}.fa-step-forward:before{content:"\f051"}.fa-eject:before{content:"\f052"}.fa-chevron-left:before{content:"\f053"}.fa-chevron-right:before{content:"\f054"}.fa-plus-circle:before{content:"\f055"}.fa-minus-circle:before{content:"\f056"}.fa-times-circle:before{content:"\f057"}.fa-check-circle:before{content:"\f058"}.fa-question-circle:before{content:"\f059"}.fa-info-circle:before{content:"\f05a"}.fa-crosshairs:before{content:"\f05b"}.fa-times-circle-o:before{content:"\f05c"}.fa-check-circle-o:before{content:"\f05d"}.fa-ban:before{content:"\f05e"}.fa-arrow-left:before{content:"\f060"}.fa-arrow-right:before{content:"\f061"}.fa-arrow-up:before{content:"\f062"}.fa-arrow-down:before{content:"\f063"}.fa-mail-forward:before,.fa-share:before{content:"\f064"}.fa-expand:before{content:"\f065"}.fa-compress:before{content:"\f066"}.fa-plus:before{content:"\f067"}.fa-minus:before{content:"\f068"}.fa-asterisk:before{content:"\f069"}.fa-exclamation-circle:before{content:"\f06a"}.fa-gift:before{content:"\f06b"}.fa-leaf:before{content:"\f06c"}.fa-fire:before{content:"\f06d"}.fa-eye:before{content:"\f06e"}.fa-eye-slash:before{content:"\f070"}.fa-warning:before,.fa-exclamation-triangle:before{content:"\f071"}.fa-plane:before{content:"\f072"}.fa-calendar:before{content:"\f073"}.fa-random:before{content:"\f074"}.fa-comment:before{content:"\f075"}.fa-magnet:before{content:"\f076"}.fa-chevron-up:before{content:"\f077"}.fa-chevron-down:before{content:"\f078"}.fa-retweet:before{content:"\f079"}.fa-shopping-cart:before{content:"\f07a"}.fa-folder:before{content:"\f07b"}.fa-folder-open:before{content:"\f07c"}.fa-arrows-v:before{content:"\f07d"}.fa-arrows-h:before{content:"\f07e"}.fa-bar-chart-o:before,.fa-bar-chart:before{content:"\f080"}.fa-twitter-square:before{content:"\f081"}.fa-facebook-square:before{content:"\f082"}.fa-camera-retro:before{content:"\f083"}.fa-key:before{content:"\f084"}.fa-gears:before,.fa-cogs:before{content:"\f085"}.fa-comments:before{content:"\f086"}.fa-thumbs-o-up:before{content:"\f087"}.fa-thumbs-o-down:before{content:"\f088"}.fa-star-half:before{content:"\f089"}.fa-heart-o:before{content:"\f08a"}.fa-sign-out:before{content:"\f08b"}.fa-linkedin-square:before{content:"\f08c"}.fa-thumb-tack:before{content:"\f08d"}.fa-external-link:before{content:"\f08e"}.fa-sign-in:before{content:"\f090"}.fa-trophy:before{content:"\f091"}.fa-github-square:before{content:"\f092"}.fa-upload:before{content:"\f093"}.fa-lemon-o:before{content:"\f094"}.fa-phone:before{content:"\f095"}.fa-square-o:before{content:"\f096"}.fa-bookmark-o:before{content:"\f097"}.fa-phone-square:before{content:"\f098"}.fa-twitter:before{content:"\f099"}.fa-facebook-f:before,.fa-facebook:before{content:"\f09a"}.fa-github:before{content:"\f09b"}.fa-unlock:before{content:"\f09c"}.fa-credit-card:before{content:"\f09d"}.fa-rss:before{content:"\f09e"}.fa-hdd-o:before{content:"\f0a0"}.fa-bullhorn:before{content:"\f0a1"}.fa-bell:before{content:"\f0f3"}.fa-certificate:before{content:"\f0a3"}.fa-hand-o-right:before{content:"\f0a4"}.fa-hand-o-left:before{content:"\f0a5"}.fa-hand-o-up:before{content:"\f0a6"}.fa-hand-o-down:before{content:"\f0a7"}.fa-arrow-circle-left:before{content:"\f0a8"}.fa-arrow-circle-right:before{content:"\f0a9"}.fa-arrow-circle-up:before{content:"\f0aa"}.fa-arrow-circle-down:before{content:"\f0ab"}.fa-globe:before{content:"\f0ac"}.fa-wrench:before{content:"\f0ad"}.fa-tasks:before{content:"\f0ae"}.fa-filter:before{content:"\f0b0"}.fa-briefcase:before{content:"\f0b1"}.fa-arrows-alt:before{content:"\f0b2"}.fa-group:before,.fa-users:before{content:"\f0c0"}.fa-chain:before,.fa-link:before{content:"\f0c1"}.fa-cloud:before{content:"\f0c2"}.fa-flask:before{content:"\f0c3"}.fa-cut:before,.fa-scissors:before{content:"\f0c4"}.fa-copy:before,.fa-files-o:before{content:"\f0c5"}.fa-paperclip:before{content:"\f0c6"}.fa-save:before,.fa-floppy-o:before{content:"\f0c7"}.fa-square:before{content:"\f0c8"}.fa-navicon:before,.fa-reorder:before,.fa-bars:before{content:"\f0c9"}.fa-list-ul:before{content:"\f0ca"}.fa-list-ol:before{content:"\f0cb"}.fa-strikethrough:before{content:"\f0cc"}.fa-underline:before{content:"\f0cd"}.fa-table:before{content:"\f0ce"}.fa-magic:before{content:"\f0d0"}.fa-truck:before{content:"\f0d1"}.fa-pinterest:before{content:"\f0d2"}.fa-pinterest-square:before{content:"\f0d3"}.fa-google-plus-square:before{content:"\f0d4"}.fa-google-plus:before{content:"\f0d5"}.fa-money:before{content:"\f0d6"}.fa-caret-down:before{content:"\f0d7"}.fa-caret-up:before{content:"\f0d8"}.fa-caret-left:before{content:"\f0d9"}.fa-caret-right:before{content:"\f0da"}.fa-columns:before{content:"\f0db"}.fa-unsorted:before,.fa-sort:before{content:"\f0dc"}.fa-sort-down:before,.fa-sort-desc:before{content:"\f0dd"}.fa-sort-up:before,.fa-sort-asc:before{content:"\f0de"}.fa-envelope:before{content:"\f0e0"}.fa-linkedin:before{content:"\f0e1"}.fa-rotate-left:before,.fa-undo:before{content:"\f0e2"}.fa-legal:before,.fa-gavel:before{content:"\f0e3"}.fa-dashboard:before,.fa-tachometer:before{content:"\f0e4"}.fa-comment-o:before{content:"\f0e5"}.fa-comments-o:before{content:"\f0e6"}.fa-flash:before,.fa-bolt:before{content:"\f0e7"}.fa-sitemap:before{content:"\f0e8"}.fa-umbrella:before{content:"\f0e9"}.fa-paste:before,.fa-clipboard:before{content:"\f0ea"}.fa-lightbulb-o:before{content:"\f0eb"}.fa-exchange:before{content:"\f0ec"}.fa-cloud-download:before{content:"\f0ed"}.fa-cloud-upload:before{content:"\f0ee"}.fa-user-md:before{content:"\f0f0"}.fa-stethoscope:before{content:"\f0f1"}.fa-suitcase:before{content:"\f0f2"}.fa-bell-o:before{content:"\f0a2"}.fa-coffee:before{content:"\f0f4"}.fa-cutlery:before{content:"\f0f5"}.fa-file-text-o:before{content:"\f0f6"}.fa-building-o:before{content:"\f0f7"}.fa-hospital-o:before{content:"\f0f8"}.fa-ambulance:before{content:"\f0f9"}.fa-medkit:before{content:"\f0fa"}.fa-fighter-jet:before{content:"\f0fb"}.fa-beer:before{content:"\f0fc"}.fa-h-square:before{content:"\f0fd"}.fa-plus-square:before{content:"\f0fe"}.fa-angle-double-left:before{content:"\f100"}.fa-angle-double-right:before{content:"\f101"}.fa-angle-double-up:before{content:"\f102"}.fa-angle-double-down:before{content:"\f103"}.fa-angle-left:before{content:"\f104"}.fa-angle-right:before{content:"\f105"}.fa-angle-up:before{content:"\f106"}.fa-angle-down:before{content:"\f107"}.fa-desktop:before{content:"\f108"}.fa-laptop:before{content:"\f109"}.fa-tablet:before{content:"\f10a"}.fa-mobile-phone:before,.fa-mobile:before{content:"\f10b"}.fa-circle-o:before{content:"\f10c"}.fa-quote-left:before{content:"\f10d"}.fa-quote-right:before{content:"\f10e"}.fa-spinner:before{content:"\f110"}.fa-circle:before{content:"\f111"}.fa-mail-reply:before,.fa-reply:before{content:"\f112"}.fa-github-alt:before{content:"\f113"}.fa-folder-o:before{content:"\f114"}.fa-folder-open-o:before{content:"\f115"}.fa-smile-o:before{content:"\f118"}.fa-frown-o:before{content:"\f119"}.fa-meh-o:before{content:"\f11a"}.fa-gamepad:before{content:"\f11b"}.fa-keyboard-o:before{content:"\f11c"}.fa-flag-o:before{content:"\f11d"}.fa-flag-checkered:before{content:"\f11e"}.fa-terminal:before{content:"\f120"}.fa-code:before{content:"\f121"}.fa-mail-reply-all:before,.fa-reply-all:before{content:"\f122"}.fa-star-half-empty:before,.fa-star-half-full:before,.fa-star-half-o:before{content:"\f123"}.fa-location-arrow:before{content:"\f124"}.fa-crop:before{content:"\f125"}.fa-code-fork:before{content:"\f126"}.fa-unlink:before,.fa-chain-broken:before{content:"\f127"}.fa-question:before{content:"\f128"}.fa-info:before{content:"\f129"}.fa-exclamation:before{content:"\f12a"}.fa-superscript:before{content:"\f12b"}.fa-subscript:before{content:"\f12c"}.fa-eraser:before{content:"\f12d"}.fa-puzzle-piece:before{content:"\f12e"}.fa-microphone:before{content:"\f130"}.fa-microphone-slash:before{content:"\f131"}.fa-shield:before{content:"\f132"}.fa-calendar-o:before{content:"\f133"}.fa-fire-extinguisher:before{content:"\f134"}.fa-rocket:before{content:"\f135"}.fa-maxcdn:before{content:"\f136"}.fa-chevron-circle-left:before{content:"\f137"}.fa-chevron-circle-right:before{content:"\f138"}.fa-chevron-circle-up:before{content:"\f139"}.fa-chevron-circle-down:before{content:"\f13a"}.fa-html5:before{content:"\f13b"}.fa-css3:before{content:"\f13c"}.fa-anchor:before{content:"\f13d"}.fa-unlock-alt:before{content:"\f13e"}.fa-bullseye:before{content:"\f140"}.fa-ellipsis-h:before{content:"\f141"}.fa-ellipsis-v:before{content:"\f142"}.fa-rss-square:before{content:"\f143"}.fa-play-circle:before{content:"\f144"}.fa-ticket:before{content:"\f145"}.fa-minus-square:before{content:"\f146"}.fa-minus-square-o:before{content:"\f147"}.fa-level-up:before{content:"\f148"}.fa-level-down:before{content:"\f149"}.fa-check-square:before{content:"\f14a"}.fa-pencil-square:before{content:"\f14b"}.fa-external-link-square:before{content:"\f14c"}.fa-share-square:before{content:"\f14d"}.fa-compass:before{content:"\f14e"}.fa-toggle-down:before,.fa-caret-square-o-down:before{content:"\f150"}.fa-toggle-up:before,.fa-caret-square-o-up:before{content:"\f151"}.fa-toggle-right:before,.fa-caret-square-o-right:before{content:"\f152"}.fa-euro:before,.fa-eur:before{content:"\f153"}.fa-gbp:before{content:"\f154"}.fa-dollar:before,.fa-usd:before{content:"\f155"}.fa-rupee:before,.fa-inr:before{content:"\f156"}.fa-cny:before,.fa-rmb:before,.fa-yen:before,.fa-jpy:before{content:"\f157"}.fa-ruble:before,.fa-rouble:before,.fa-rub:before{content:"\f158"}.fa-won:before,.fa-krw:before{content:"\f159"}.fa-bitcoin:before,.fa-btc:before{content:"\f15a"}.fa-file:before{content:"\f15b"}.fa-file-text:before{content:"\f15c"}.fa-sort-alpha-asc:before{content:"\f15d"}.fa-sort-alpha-desc:before{content:"\f15e"}.fa-sort-amount-asc:before{content:"\f160"}.fa-sort-amount-desc:before{content:"\f161"}.fa-sort-numeric-asc:before{content:"\f162"}.fa-sort-numeric-desc:before{content:"\f163"}.fa-thumbs-up:before{content:"\f164"}.fa-thumbs-down:before{content:"\f165"}.fa-youtube-square:before{content:"\f166"}.fa-youtube:before{content:"\f167"}.fa-xing:before{content:"\f168"}.fa-xing-square:before{content:"\f169"}.fa-youtube-play:before{content:"\f16a"}.fa-dropbox:before{content:"\f16b"}.fa-stack-overflow:before{content:"\f16c"}.fa-instagram:before{content:"\f16d"}.fa-flickr:before{content:"\f16e"}.fa-adn:before{content:"\f170"}.fa-bitbucket:before{content:"\f171"}.fa-bitbucket-square:before{content:"\f172"}.fa-tumblr:before{content:"\f173"}.fa-tumblr-square:before{content:"\f174"}.fa-long-arrow-down:before{content:"\f175"}.fa-long-arrow-up:before{content:"\f176"}.fa-long-arrow-left:before{content:"\f177"}.fa-long-arrow-right:before{content:"\f178"}.fa-apple:before{content:"\f179"}.fa-windows:before{content:"\f17a"}.fa-android:before{content:"\f17b"}.fa-linux:before{content:"\f17c"}.fa-dribbble:before{content:"\f17d"}.fa-skype:before{content:"\f17e"}.fa-foursquare:before{content:"\f180"}.fa-trello:before{content:"\f181"}.fa-female:before{content:"\f182"}.fa-male:before{content:"\f183"}.fa-gittip:before,.fa-gratipay:before{content:"\f184"}.fa-sun-o:before{content:"\f185"}.fa-moon-o:before{content:"\f186"}.fa-archive:before{content:"\f187"}.fa-bug:before{content:"\f188"}.fa-vk:before{content:"\f189"}.fa-weibo:before{content:"\f18a"}.fa-renren:before{content:"\f18b"}.fa-pagelines:before{content:"\f18c"}.fa-stack-exchange:before{content:"\f18d"}.fa-arrow-circle-o-right:before{content:"\f18e"}.fa-arrow-circle-o-left:before{content:"\f190"}.fa-toggle-left:before,.fa-caret-square-o-left:before{content:"\f191"}.fa-dot-circle-o:before{content:"\f192"}.fa-wheelchair:before{content:"\f193"}.fa-vimeo-square:before{content:"\f194"}.fa-turkish-lira:before,.fa-try:before{content:"\f195"}.fa-plus-square-o:before{content:"\f196"}.fa-space-shuttle:before{content:"\f197"}.fa-slack:before{content:"\f198"}.fa-envelope-square:before{content:"\f199"}.fa-wordpress:before{content:"\f19a"}.fa-openid:before{content:"\f19b"}.fa-institution:before,.fa-bank:before,.fa-university:before{content:"\f19c"}.fa-mortar-board:before,.fa-graduation-cap:before{content:"\f19d"}.fa-yahoo:before{content:"\f19e"}.fa-google:before{content:"\f1a0"}.fa-reddit:before{content:"\f1a1"}.fa-reddit-square:before{content:"\f1a2"}.fa-stumbleupon-circle:before{content:"\f1a3"}.fa-stumbleupon:before{content:"\f1a4"}.fa-delicious:before{content:"\f1a5"}.fa-digg:before{content:"\f1a6"}.fa-pied-piper:before{content:"\f1a7"}.fa-pied-piper-alt:before{content:"\f1a8"}.fa-drupal:before{content:"\f1a9"}.fa-joomla:before{content:"\f1aa"}.fa-language:before{content:"\f1ab"}.fa-fax:before{content:"\f1ac"}.fa-building:before{content:"\f1ad"}.fa-child:before{content:"\f1ae"}.fa-paw:before{content:"\f1b0"}.fa-spoon:before{content:"\f1b1"}.fa-cube:before{content:"\f1b2"}.fa-cubes:before{content:"\f1b3"}.fa-behance:before{content:"\f1b4"}.fa-behance-square:before{content:"\f1b5"}.fa-steam:before{content:"\f1b6"}.fa-steam-square:before{content:"\f1b7"}.fa-recycle:before{content:"\f1b8"}.fa-automobile:before,.fa-car:before{content:"\f1b9"}.fa-cab:before,.fa-taxi:before{content:"\f1ba"}.fa-tree:before{content:"\f1bb"}.fa-spotify:before{content:"\f1bc"}.fa-deviantart:before{content:"\f1bd"}.fa-soundcloud:before{content:"\f1be"}.fa-database:before{content:"\f1c0"}.fa-file-pdf-o:before{content:"\f1c1"}.fa-file-word-o:before{content:"\f1c2"}.fa-file-excel-o:before{content:"\f1c3"}.fa-file-powerpoint-o:before{content:"\f1c4"}.fa-file-photo-o:before,.fa-file-picture-o:before,.fa-file-image-o:before{content:"\f1c5"}.fa-file-zip-o:before,.fa-file-archive-o:before{content:"\f1c6"}.fa-file-sound-o:before,.fa-file-audio-o:before{content:"\f1c7"}.fa-file-movie-o:before,.fa-file-video-o:before{content:"\f1c8"}.fa-file-code-o:before{content:"\f1c9"}.fa-vine:before{content:"\f1ca"}.fa-codepen:before{content:"\f1cb"}.fa-jsfiddle:before{content:"\f1cc"}.fa-life-bouy:before,.fa-life-buoy:before,.fa-life-saver:before,.fa-support:before,.fa-life-ring:before{content:"\f1cd"}.fa-circle-o-notch:before{content:"\f1ce"}.fa-ra:before,.fa-rebel:before{content:"\f1d0"}.fa-ge:before,.fa-empire:before{content:"\f1d1"}.fa-git-square:before{content:"\f1d2"}.fa-git:before{content:"\f1d3"}.fa-hacker-news:before{content:"\f1d4"}.fa-tencent-weibo:before{content:"\f1d5"}.fa-qq:before{content:"\f1d6"}.fa-wechat:before,.fa-weixin:before{content:"\f1d7"}.fa-send:before,.fa-paper-plane:before{content:"\f1d8"}.fa-send-o:before,.fa-paper-plane-o:before{content:"\f1d9"}.fa-history:before{content:"\f1da"}.fa-genderless:before,.fa-circle-thin:before{content:"\f1db"}.fa-header:before{content:"\f1dc"}.fa-paragraph:before{content:"\f1dd"}.fa-sliders:before{content:"\f1de"}.fa-share-alt:before{content:"\f1e0"}.fa-share-alt-square:before{content:"\f1e1"}.fa-bomb:before{content:"\f1e2"}.fa-soccer-ball-o:before,.fa-futbol-o:before{content:"\f1e3"}.fa-tty:before{content:"\f1e4"}.fa-binoculars:before{content:"\f1e5"}.fa-plug:before{content:"\f1e6"}.fa-slideshare:before{content:"\f1e7"}.fa-twitch:before{content:"\f1e8"}.fa-yelp:before{content:"\f1e9"}.fa-newspaper-o:before{content:"\f1ea"}.fa-wifi:before{content:"\f1eb"}.fa-calculator:before{content:"\f1ec"}.fa-paypal:before{content:"\f1ed"}.fa-google-wallet:before{content:"\f1ee"}.fa-cc-visa:before{content:"\f1f0"}.fa-cc-mastercard:before{content:"\f1f1"}.fa-cc-discover:before{content:"\f1f2"}.fa-cc-amex:before{content:"\f1f3"}.fa-cc-paypal:before{content:"\f1f4"}.fa-cc-stripe:before{content:"\f1f5"}.fa-bell-slash:before{content:"\f1f6"}.fa-bell-slash-o:before{content:"\f1f7"}.fa-trash:before{content:"\f1f8"}.fa-copyright:before{content:"\f1f9"}.fa-at:before{content:"\f1fa"}.fa-eyedropper:before{content:"\f1fb"}.fa-paint-brush:before{content:"\f1fc"}.fa-birthday-cake:before{content:"\f1fd"}.fa-area-chart:before{content:"\f1fe"}.fa-pie-chart:before{content:"\f200"}.fa-line-chart:before{content:"\f201"}.fa-lastfm:before{content:"\f202"}.fa-lastfm-square:before{content:"\f203"}.fa-toggle-off:before{content:"\f204"}.fa-toggle-on:before{content:"\f205"}.fa-bicycle:before{content:"\f206"}.fa-bus:before{content:"\f207"}.fa-ioxhost:before{content:"\f208"}.fa-angellist:before{content:"\f209"}.fa-cc:before{content:"\f20a"}.fa-shekel:before,.fa-sheqel:before,.fa-ils:before{content:"\f20b"}.fa-meanpath:before{content:"\f20c"}.fa-buysellads:before{content:"\f20d"}.fa-connectdevelop:before{content:"\f20e"}.fa-dashcube:before{content:"\f210"}.fa-forumbee:before{content:"\f211"}.fa-leanpub:before{content:"\f212"}.fa-sellsy:before{content:"\f213"}.fa-shirtsinbulk:before{content:"\f214"}.fa-simplybuilt:before{content:"\f215"}.fa-skyatlas:before{content:"\f216"}.fa-cart-plus:before{content:"\f217"}.fa-cart-arrow-down:before{content:"\f218"}.fa-diamond:before{content:"\f219"}.fa-ship:before{content:"\f21a"}.fa-user-secret:before{content:"\f21b"}.fa-motorcycle:before{content:"\f21c"}.fa-street-view:before{content:"\f21d"}.fa-heartbeat:before{content:"\f21e"}.fa-venus:before{content:"\f221"}.fa-mars:before{content:"\f222"}.fa-mercury:before{content:"\f223"}.fa-transgender:before{content:"\f224"}.fa-transgender-alt:before{content:"\f225"}.fa-venus-double:before{content:"\f226"}.fa-mars-double:before{content:"\f227"}.fa-venus-mars:before{content:"\f228"}.fa-mars-stroke:before{content:"\f229"}.fa-mars-stroke-v:before{content:"\f22a"}.fa-mars-stroke-h:before{content:"\f22b"}.fa-neuter:before{content:"\f22c"}.fa-facebook-official:before{content:"\f230"}.fa-pinterest-p:before{content:"\f231"}.fa-whatsapp:before{content:"\f232"}.fa-server:before{content:"\f233"}.fa-user-plus:before{content:"\f234"}.fa-user-times:before{content:"\f235"}.fa-hotel:before,.fa-bed:before{content:"\f236"}.fa-viacoin:before{content:"\f237"}.fa-train:before{content:"\f238"}.fa-subway:before{content:"\f239"}.fa-medium:before{content:"\f23a"}</style>
+    <style>
+      :host {
+        display: none;
+      }
+    </style>
+    <core-iconset-svg id="fa" iconsize="24">
+      <svg width="24" height="24" viewBox="0 0 24 24">
+        <defs>
+          <g id="adjust"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="adn"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="align-center"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="align-justify"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="align-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="align-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="ambulance"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="anchor"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="android"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="angellist"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="angle-double-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="angle-double-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="angle-double-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="angle-double-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="angle-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="angle-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="angle-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="angle-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="apple"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="archive"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="area-chart"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrow-circle-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrow-circle-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrow-circle-o-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrow-circle-o-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrow-circle-o-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrow-circle-o-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrow-circle-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrow-circle-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrow-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrow-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrow-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrow-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrows"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrows-alt"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrows-h"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="arrows-v"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="asterisk"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="at"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="automobile"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="backward"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="ban"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bank"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bar-chart"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bar-chart-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="barcode"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bars"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bed"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="beer"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="behance"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="behance-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bell"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bell-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bell-slash"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bell-slash-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bicycle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="binoculars"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="birthday-cake"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bitbucket"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bitbucket-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bitcoin"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bold"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bolt"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bomb"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="book"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bookmark"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bookmark-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="briefcase"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="btc"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bug"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="building"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="building-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bullhorn"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bullseye"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="bus"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="buysellads"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cab"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="calculator"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="calendar"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="calendar-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="camera"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="camera-retro"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="car"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="caret-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="caret-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="caret-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="caret-square-o-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="caret-square-o-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="caret-square-o-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="caret-square-o-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="caret-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cart-arrow-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cart-plus"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cc"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cc-amex"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cc-discover"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cc-mastercard"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cc-paypal"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cc-stripe"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cc-visa"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="certificate"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="chain"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="chain-broken"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="check"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="check-circle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="check-circle-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="check-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="check-square-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="chevron-circle-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="chevron-circle-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="chevron-circle-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="chevron-circle-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="chevron-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="chevron-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="chevron-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="chevron-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="child"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="circle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="circle-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="circle-o-notch"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="circle-thin"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="clipboard"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="clock-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="close"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cloud"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cloud-download"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cloud-upload"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cny"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="code"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="code-fork"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="codepen"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="coffee"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cog"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cogs"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="columns"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="comment"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="comment-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="comments"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="comments-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="compass"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="compress"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="connectdevelop"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="copy"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="copyright"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="credit-card"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="crop"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="crosshairs"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="css3"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cube"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cubes"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cut"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="cutlery"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="dashboard"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="dashcube"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="database"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="dedent"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="delicious"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="desktop"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="deviantart"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="diamond"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="digg"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="dollar"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="dot-circle-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="download"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="dribbble"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="dropbox"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="drupal"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="edit"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="eject"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="ellipsis-h"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="ellipsis-v"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="empire"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="envelope"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="envelope-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="envelope-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="eraser"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="eur"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="euro"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="exchange"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="exclamation"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="exclamation-circle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="exclamation-triangle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="expand"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="external-link"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="external-link-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="eye"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="eye-slash"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="eyedropper"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="facebook"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="facebook-f"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="facebook-official"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="facebook-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="fast-backward"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="fast-forward"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="fax"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="female"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="fighter-jet"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-archive-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-audio-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-code-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-excel-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-image-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-movie-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-pdf-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-photo-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-picture-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-powerpoint-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-sound-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-text"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-text-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-video-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-word-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="file-zip-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="files-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="film"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="filter"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="fire"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="fire-extinguisher"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="flag"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="flag-checkered"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="flag-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="flash"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="flask"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="flickr"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="floppy-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="folder"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="folder-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="folder-open"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="folder-open-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="font"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="forumbee"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="forward"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="foursquare"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="frown-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="futbol-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="gamepad"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="gavel"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="gbp"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="ge"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="gear"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="gears"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="genderless"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="gift"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="git"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="git-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="github"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="github-alt"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="github-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="gittip"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="glass"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="globe"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="google"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="google-plus"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="google-plus-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="google-wallet"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="graduation-cap"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="gratipay"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="group"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="h-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="hacker-news"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="hand-o-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="hand-o-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="hand-o-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="hand-o-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="hdd-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="header"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="headphones"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="heart"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="heart-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="heartbeat"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="history"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="home"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="hospital-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="hotel"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="html5"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="ils"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="image"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="inbox"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="indent"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="info"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="info-circle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="inr"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="instagram"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="institution"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="ioxhost"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="italic"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="joomla"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="jpy"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="jsfiddle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="key"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="keyboard-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="krw"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="language"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="laptop"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="lastfm"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="lastfm-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="leaf"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="leanpub"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="legal"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="lemon-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="level-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="level-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="life-bouy"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="life-buoy"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="life-ring"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="life-saver"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="lightbulb-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="line-chart"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="link"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="linkedin"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="linkedin-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="linux"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="list"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="list-alt"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="list-ol"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="list-ul"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="location-arrow"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="lock"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="long-arrow-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="long-arrow-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="long-arrow-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="long-arrow-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="magic"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="magnet"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="mail-forward"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="mail-reply"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="mail-reply-all"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="male"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="map-marker"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="mars"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="mars-double"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="mars-stroke"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="mars-stroke-h"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="mars-stroke-v"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="maxcdn"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="meanpath"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="medium"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="medkit"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="meh-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="mercury"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="microphone"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="microphone-slash"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="minus"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="minus-circle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="minus-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="minus-square-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="mobile"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="mobile-phone"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="money"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="moon-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="mortar-board"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="motorcycle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="music"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="navicon"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="neuter"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="newspaper-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="openid"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="outdent"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="pagelines"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="paint-brush"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="paper-plane"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="paper-plane-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="paperclip"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="paragraph"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="paste"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="pause"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="paw"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="paypal"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="pencil"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="pencil-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="pencil-square-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="phone"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="phone-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="photo"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="picture-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="pie-chart"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="pied-piper"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="pied-piper-alt"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="pinterest"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="pinterest-p"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="pinterest-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="plane"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="play"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="play-circle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="play-circle-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="plug"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="plus"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="plus-circle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="plus-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="plus-square-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="power-off"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="print"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="puzzle-piece"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="qq"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="qrcode"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="question"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="question-circle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="quote-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="quote-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="ra"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="random"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="rebel"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="recycle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="reddit"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="reddit-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="refresh"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="remove"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="renren"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="reorder"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="repeat"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="reply"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="reply-all"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="retweet"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="rmb"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="road"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="rocket"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="rotate-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="rotate-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="rouble"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="rss"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="rss-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="rub"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="ruble"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="rupee"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="save"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="scissors"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="search"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="search-minus"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="search-plus"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sellsy"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="send"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="send-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="server"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="share"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="share-alt"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="share-alt-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="share-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="share-square-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="shekel"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sheqel"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="shield"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="ship"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="shirtsinbulk"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="shopping-cart"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sign-in"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sign-out"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="signal"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="simplybuilt"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sitemap"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="skyatlas"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="skype"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="slack"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sliders"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="slideshare"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="smile-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="soccer-ball-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sort"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sort-alpha-asc"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sort-alpha-desc"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sort-amount-asc"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sort-amount-desc"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sort-asc"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sort-desc"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sort-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sort-numeric-asc"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sort-numeric-desc"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sort-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="soundcloud"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="space-shuttle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="spinner"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="spoon"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="spotify"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="square-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="stack-exchange"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="stack-overflow"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="star"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="star-half"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="star-half-empty"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="star-half-full"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="star-half-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="star-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="steam"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="steam-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="step-backward"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="step-forward"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="stethoscope"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="stop"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="street-view"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="strikethrough"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="stumbleupon"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="stumbleupon-circle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="subscript"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="subway"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="suitcase"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="sun-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="superscript"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="support"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="table"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="tablet"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="tachometer"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="tag"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="tags"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="tasks"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="taxi"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="tencent-weibo"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="terminal"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="text-height"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="text-width"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="th"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="th-large"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="th-list"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="thumb-tack"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="thumbs-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="thumbs-o-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="thumbs-o-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="thumbs-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="ticket"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="times"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="times-circle"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="times-circle-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="tint"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="toggle-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="toggle-left"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="toggle-off"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="toggle-on"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="toggle-right"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="toggle-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="train"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="transgender"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="transgender-alt"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="trash"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="trash-o"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="tree"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="trello"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="trophy"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="truck"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="try"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="tty"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="tumblr"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="tumblr-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="turkish-lira"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="twitch"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="twitter"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="twitter-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="umbrella"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="underline"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="undo"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="university"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="unlink"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="unlock"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="unlock-alt"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="unsorted"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="upload"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="usd"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="user"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="user-md"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="user-plus"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="user-secret"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="user-times"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="users"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="venus"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="venus-double"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="venus-mars"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="viacoin"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="video-camera"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="vimeo-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="vine"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="vk"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="volume-down"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="volume-off"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="volume-up"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="warning"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="wechat"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="weibo"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="weixin"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="whatsapp"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="wheelchair"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="wifi"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="windows"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="won"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="wordpress"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="wrench"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="xing"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="xing-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="yahoo"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="yelp"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="yen"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="youtube"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="youtube-play"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+          <g id="youtube-square"><text class="bwu-fa-icon" x="12" y="12"></text></g>
+        </defs>
+      </svg>
+    </core-iconset-svg>
+  </template>
+</polymer-element>
+
+
+<polymer-element name="ex03-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      h2 {
+        text-transform: capitalize;
+      }
+
+      core-icon {
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+      }
+
+      core-icon:hover {
+        fill: #fb8c00;
+      }
+
+      .set {
+        padding: 1em 0;
+        border-bottom: 1px solid silver;
+        color: #656565;
+      }
+
+      .container {
+        min-width: 10em;
+        padding: 1em;
+      }
+
+      .container > div {
+        color: black;
+      }
+    </style>
+    <h3>BWU Fontawesome Iconset SVG - Example 3</h3>
+    <ul>
+      <li><a href="http://polymer.github.io/core-icons/components/core-icons/demo.html" target="_blank">Polymer core-icons overview</a> </li>
+    </ul>
+    <div class="set" horizontal="" wrap="" justified="" layout="">
+      <bwu-fontawesome-iconset-svg id="iconset"></bwu-fontawesome-iconset-svg>
+      <template repeat="{{ icon in iconNames }}">
+        <span class="container" vertical="" center="" layout="">
+          <core-icon icon="fa:{{ icon }}"></core-icon>
+          <div>{{ icon }}</div>
+        </span>
+      </template>
+    </div>
+  </template>
+  
+</polymer-element>
+</div>
+    <a href="https://github.com/bwu-dart/bwu_fontawesome_iconset_svg"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+    <ex03-app></ex03-app>
+    <script src="example03.html.polymer.bootstrap.dart.js" async=""></script>
+  
+
+</body></html>
