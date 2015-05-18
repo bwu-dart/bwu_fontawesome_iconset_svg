@@ -1,5 +1,6 @@
 library bwu_fontawesome_iconset_svg.tool.grind;
 
+import 'dart:io' as io;
 import 'package:grinder/grinder.dart';
 import 'fa_upgrade.dart' as fa;
 
@@ -41,8 +42,16 @@ buildExample() => Pub.build(mode: 'release', directories: ['example']);
 @Task('Update to latest Font Awesome version')
 faUpgrade() => fa.upgrade();
 
-
 /// Similar to `fa-upgrade` but skips download (assumes download already succeeded).
 @Task('Generate the iconset element')
 faGenerate() => fa.upgrade(skipDownload: true);
 
+@Task('Generate GitHub pages (examples)')
+gh() {
+  final rootDir = io.Directory.current.path;
+  new PubApp.global('ghpages_generator').run(
+      ['--with-examples', '--root-dir=${rootDir}'], script: 'generate_ghpages');
+}
+
+@Task('Push generated GitHub pages')
+ghp() => run('git', arguments: ['push', 'origin', 'gh-pages', '-f']);
