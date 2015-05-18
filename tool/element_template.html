@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<style>
+  @font-face {
+    font-family: 'FontAwesome';
+    src: url('font-awesome-${fa_version}/fonts/fontawesome-webfont.eot?v=${fa_version}');
+    src: url('font-awesome-${fa_version}/fonts/fontawesome-webfont.eot?#iefix&v=${fa_version}') format('embedded-opentype'),
+         url('font-awesome-${fa_version}/fonts/fontawesome-webfont.woff?v=${fa_version}') format('woff'),
+         url('font-awesome-${fa_version}/fonts/fontawesome-webfont.ttf?v=${fa_version}') format('truetype'),
+         url('font-awesome-${fa_version}/fonts/fontawesome-webfont.svg?v=${fa_version}#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  * /deep/ core-icon text.bwu-fa-icon {
+    font-family: "FontAwesome";
+    font-size: 24px;
+    dominant-baseline: central;
+    text-anchor: middle;
+  }
+
+  /* Firefox ignores the second selector if it doesn't understand the first one, therefore I have to duplicate this style here */
+  core-icon text.bwu-fa-icon {
+    font-family: "FontAwesome";
+    font-size: 24px;
+    dominant-baseline: central;
+    text-anchor: middle;
+  }
+
+</style>
+
+<link rel="import" href="../../packages/polymer/polymer.html">
+<link rel="import" href="../../packages/core_elements/core_iconset_svg.html">
+
+<polymer-element name='bwu-fontawesome-iconset-svg' noscript>
+  <template>
+    <link rel="stylesheet" href="../../packages/bwu_fontawesome_iconset_svg/font-awesome-${fa_version}/css/font-awesome.min.css">
+    <style>
+      :host {
+        display: none;
+      }
+    </style>
+    <core-iconset-svg id="fa" iconSize="24">
+      <svg width="24" height="24" viewBox="0 0 24 24" >
+        <defs>
+${icons}
+        </defs>
+      </svg>
+    </core-iconset-svg>
+  </template>
+</polymer-element>

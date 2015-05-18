@@ -1,5 +1,13 @@
-##0.1.3
+##0.2.0
+- update to Font Awesome 4.3.0
+- automate download of new Font Awesome version and regenerating the Polymer
+  element.
+
+##0.1.4
 - move `test` from `dev_dependencies` to `dependencies`.
+
+##0.1.3
+- ??
 
 ##0.1.2
 - widen dependency constraints for core-elements 0.7.0

@@ -1,6 +1,7 @@
 library bwu_fontawesome_iconset_svg.tool.grind;
 
 import 'package:grinder/grinder.dart';
+import 'fa_upgrade.dart' as fa;
 
 const sourceDirs = const ['bin', 'lib', 'tool', 'test', 'example'];
 
@@ -34,3 +35,14 @@ lint() => new PubApp.global('linter')
 
 @Task('Build examples to JavaScript')
 buildExample() => Pub.build(mode: 'release', directories: ['example']);
+
+/// Currently the target version needs to be updated manually in `fa_upgrade.dart`.
+// TODO(zoechi) support version argument when Grinder supports it.
+@Task('Update to latest Font Awesome version')
+faUpgrade() => fa.upgrade();
+
+
+/// Similar to `fa-upgrade` but skips download (assumes download already succeeded).
+@Task('Generate the iconset element')
+faGenerate() => fa.upgrade(skipDownload: true);
+
