@@ -8,6 +8,8 @@ export 'package:polymer/init.dart';
 @whenPolymerReady
 init() {
   group('icon', () {
-    test('simple', () {});
+    test('simple', () {
+      expect(true, isTrue);
+    });
   });
 }

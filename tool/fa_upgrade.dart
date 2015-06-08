@@ -24,7 +24,7 @@ final varsRegExp = new RegExp(r'^\s*@fa-var-(.*)\:\s*\"\\([a-f0-9]{4})\";\s*$');
 io.Directory tempDir;
 
 Future upgrade({bool skipDownload: false}) async {
-  if(!skipDownload) {
+  if (!skipDownload) {
     final archiveFile = await _download();
     await _removeOld();
     await _extract(archiveFile);
@@ -34,8 +34,10 @@ Future upgrade({bool skipDownload: false}) async {
 }
 
 void _removeOld() {
-  final oldDir = new io.Directory(libDirectoryPath).listSync().where(
-      (d) => d is io.Directory && d.path.startsWith(path.join(libDirectoryPath, 'font-awesome-')));
+  final oldDir = new io.Directory(libDirectoryPath)
+      .listSync()
+      .where((d) => d is io.Directory &&
+          d.path.startsWith(path.join(libDirectoryPath, 'font-awesome-')));
   if (oldDir != null && oldDir.length > 1) {
     throw 'More than one old directory found. `_removeOld()` can\'t continue';
   }
@@ -58,7 +60,7 @@ Future<io.File> _download() async {
   return file;
 }
 
-void  _extract(io.File archiveFile) {
+void _extract(io.File archiveFile) {
   List<int> bytes = archiveFile.readAsBytesSync();
   final archive = new ZipDecoder().decodeBytes(bytes);
   for (ArchiveFile file in archive) {
@@ -74,35 +76,38 @@ void  _extract(io.File archiveFile) {
   }
 
   final outDir = path.join(libDirectoryPath, archive.first.name);
-  if('${faExtractDirectory}/' != outDir) {
+  if ('${faExtractDirectory}/' != outDir) {
     throw 'The output directory "${outDir}" differs from the expected "${faExtractDirectory}".';
   }
 }
 
 void _cleanupTemp() {
-  if(tempDir != null) {
+  if (tempDir != null) {
     tempDir.deleteSync(recursive: true);
   }
 }
 
 void _generateElement() {
-  final vars = new io.File(variablesFilePath).readAsLinesSync().where((l) => l.trim().startsWith('@fa-var-'));
+  final vars = new io.File(variablesFilePath)
+      .readAsLinesSync()
+      .where((l) => l.trim().startsWith('@fa-var-'));
 
   final icons = vars.map((v) {
     final matches = varsRegExp.firstMatch(v);
     try {
-    return _iconMarkup(matches.group(1), matches.group(2));
-    } catch(e) {
+      return _iconMarkup(matches.group(1), matches.group(2));
+    } catch (e) {
       print(e);
     }
   }).join('\n');
 
-  var template = new io.File(elementTemplateFilePath).readAsStringSync()
-    .replaceAll(faVersionRegExp, newVersion)
-    .replaceFirst(iconsRegExp, icons);
+  var template = new io.File(elementTemplateFilePath)
+      .readAsStringSync()
+      .replaceAll(faVersionRegExp, newVersion)
+      .replaceFirst(iconsRegExp, icons);
 
   new io.File(elementFilePath).writeAsStringSync(template, flush: true);
 }
 
 String _iconMarkup(String id, String code) =>
-  '          <g id="${id}"><text class="bwu-fa-icon"  x="12" y="12">&#x${code};</text></g>';
+    '          <g id="${id}"><text class="bwu-fa-icon"  x="12" y="12">&#x${code};</text></g>';

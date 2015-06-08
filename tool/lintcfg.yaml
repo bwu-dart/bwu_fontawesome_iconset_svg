@@ -1,10 +1,10 @@
 # File set description: lists of patterns to include/exclude
 files:
   include:
+    - '**/example/**'
     - '**/lib/**'
     - '**/test/**'
     - '**/tool/**'
-    - '**/example/**'
   exclude:
     - test/.tmp_data/**
 
