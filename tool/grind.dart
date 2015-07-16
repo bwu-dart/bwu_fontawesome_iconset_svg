@@ -1,8 +1,8 @@
 library bwu_fontawesome_iconset_svg.tool.grind;
 
 import 'dart:io' as io;
-export 'package:bwu_utils_dev/grinder/default_tasks.dart';
-import 'package:bwu_utils_dev/grinder/default_tasks.dart';
+export 'package:bwu_grinder_tasks/bwu_grinder_tasks.dart';
+import 'package:bwu_grinder_tasks/bwu_grinder_tasks.dart';
 import 'package:grinder/grinder.dart';
 import 'fa_upgrade.dart' as fa;
 
