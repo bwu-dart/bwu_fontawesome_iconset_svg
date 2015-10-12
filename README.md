@@ -7,16 +7,19 @@
 
 ## Usage
 
+You need to import the dart library somewhere (main.dart or in the Dart code
+of the element where you want to use it.
+
+```dart
+import 'package:bwu_fontawesome_iconset_svg/bwu_fontawesome_iconset_svg.dart';
+```
+
+In HTML:
+
 ```html
 <!-- in the head of the entry page add -->
 <meta charset="utf-8">
 <!-- !! this is mandatory !! -->
-
-<!-- import once (only in the entry page) -->
-<link rel="import" href="packages/bwu_fontawesome_iconset_svg/bwu_fontawesome_iconset_svg.html">
-
-<!-- initialization once (only in the entry page for example) -->
-<bwu-fontawesome-iconset></bwu-fontawesome-iconset>
 
 <!-- application -->
 <paper-menu-button icon="fa:list">
