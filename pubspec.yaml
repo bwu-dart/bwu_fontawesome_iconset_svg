@@ -6,7 +6,7 @@ authors:
 - Günter Zöchbauer <guenter@gzoechbauer.com>
 - Kun Zhao <kunzhao77@gmail.com>
 environment:
-  sdk: '>=1.0.0 <2.0.0'
+  sdk: '>=1.8.0 <2.0.0'
 
 dependencies:
   polymer_elements: ^1.0.0-rc.2

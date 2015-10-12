@@ -23,7 +23,7 @@ In HTML:
 
 <!-- application -->
 <paper-menu-button icon="fa:list">
-<core-icon icon="fa:glass"></core-icon>
+<iron-icon icon="fa:glass"></iron-icon>
 
 ```
 
