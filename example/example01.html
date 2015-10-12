@@ -6,38 +6,34 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BWU FontAwesome IconSet - Example 1</title>
 
-    <link rel="import" href="packages/core_elements/core_iconset_svg.html">
-    <link rel="import" href="packages/core_elements/core_toolbar.html">
-    <link rel="import" href="packages/core_elements/core_icon.html">
-    <link rel="import" href="packages/core_elements/core_menu.html">
-    <link rel="import" href="packages/paper_elements/paper_icon_button.html">
-    <link rel="import" href="packages/paper_elements/paper_menu_button.html">
-    <link rel="import" href="packages/paper_elements/paper_dropdown.html">
-    <link rel="import" href="packages/paper_elements/paper_item.html">
-    <link rel="import" href="packages/bwu_fontawesome_iconset_svg/bwu_fontawesome_iconset_svg.html">
-    <link rel="import" href="some_component.html">
+    <script src="packages/web_components/webcomponents-lite.min.js"></script>
 
+    <style is="custom-style">
+      /*paper-toolbar {*/
+        /*--paper-toolbar-background: #eee;*/
+      /*}*/
+    </style>
     <style>
-      core-icon[icon='fa:glass'] {
+      iron-icon[icon='fa:glass'] {
         fill: lightblue;
         stroke: blue;
         opacity: 0.5;
       }
 
-      core-icon[icon='fa:adjust'] {
+      iron-icon[icon='fa:adjust'] {
         fill: gray;
       }
 
-      core-icon[icon='fa:save'] {
+      iron-icon[icon='fa:save'] {
         fill: #000088;
       }
 
-      core-icon[icon='fa:list'] {
+      iron-icon[icon='fa:list'] {
         fill: #88cc44;
       }
 
       /* inside an imported component */
-      some-component::shadow core-icon[icon='fa:glass'] {
+      some-component::shadow iron-icon[icon='fa:glass'] {
         stroke: #88cc44;
         fill: #ffffff;
       }
@@ -48,29 +44,28 @@
   <body unresolved>
     <p id="text">BWU Fontawesome Iconset SVG - Example 1</p>
 
-    <bwu-fontawesome-iconset-svg></bwu-fontawesome-iconset-svg>
+    <iron-icon icon="fa:glass"></iron-icon>
+    <iron-icon icon="fa:list"></iron-icon>
+    <iron-icon icon="fa:save" style="width:48px; height:48px;"></iron-icon>
+    <iron-icon icon="fa:adjust"></iron-icon>
 
-    <core-icon icon="fa:glass"></core-icon>
-    <core-icon icon="fa:list"></core-icon>
-    <core-icon icon="fa:save" style="width:48px; height:48px;"></core-icon>
-    <core-icon icon="fa:adjust"></core-icon>
-
-    <core-toolbar id="mainheader">
-      <paper-menu-button>
-        <paper-icon-button icon="fa:list" noink role="button" tabindex="0"></paper-icon-button>
-        <paper-dropdown class="dropdown core-transition core-closed" tabindex="-1">
-          <core-menu class="menu">
-            <paper-item><core-icon icon="fa:glass"></core-icon>&nbsp;Visibility</paper-item>
-            <paper-item><core-icon icon="fa:adjust"></core-icon>&nbsp;Extension</paper-item>
-            <paper-item><core-icon icon="fa:save"></core-icon>&nbsp;Info</paper-item>
-          </core-menu>
-        </paper-dropdown>
+    <paper-toolbar>
+      <paper-menu-button >
+        <paper-icon-button icon="fa:list" class="dropdown-trigger" role="button" tabindex="0"></paper-icon-button>
+        <paper-menu class="dropdown-content">
+          <paper-item><iron-icon icon="fa:glass"></iron-icon>&nbsp;Visibility</paper-item>
+          <paper-item><iron-icon icon="fa:adjust"></iron-icon>&nbsp;Extension</paper-item>
+          <paper-item><iron-icon icon="fa:save"></iron-icon>&nbsp;Info</paper-item>
+        </paper-menu>
       </paper-menu-button>
-      &lt;= click me
-    </core-toolbar>
+      <div class="title">
+        &lt;= click me
+      </div>
+    </paper-toolbar>
 
     <some-component></some-component>
 
-    <script type="application/dart">export 'package:polymer/init.dart';</script>
+    <script type="application/dart" src="example01.dart"></script>
+    <script src="packages/browser/dart.js"></script>
   </body>
 </html>

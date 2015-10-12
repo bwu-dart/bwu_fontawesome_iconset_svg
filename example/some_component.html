@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-
-<link rel="import" href="packages/polymer/polymer.html">
-<link rel="import" href="packages/core_elements/core_icon.html">
-
-<polymer-element name="some-component" noscript>
+<dom-module id="some-component">
   <template>
-    <core-icon icon="fa:glass"></core-icon> (inside an imported component)
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <iron-icon icon="fa:glass"></iron-icon>
+    (inside an imported component)
   </template>
-</polymer-element>
+</dom-module>

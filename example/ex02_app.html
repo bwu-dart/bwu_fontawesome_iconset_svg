@@ -1,12 +1,4 @@
-<link rel="import" href="packages/polymer/polymer.html">
-
-<link rel="import" href="packages/core_elements/core_icon.html">
-<link rel="import" href="packages/paper_elements/paper_button.html">
-<link rel="import" href="packages/core_elements/social_icons.html">
-<link rel="import" href="packages/bwu_fontawesome_iconset_svg/bwu_fontawesome_iconset_svg.html">
-<link rel="import" href="some_component.html">
-
-<polymer-element name="ex02-app">
+<dom-module id="ex02-app">
   <template>
     <style>
       :host {
@@ -18,10 +10,10 @@
 
     <bwu-fontawesome-iconset-svg></bwu-fontawesome-iconset-svg>
 
-    <paper-button><core-icon id="bookmark-button" icon="fa:glass"></core-icon></paper-button>
-    <paper-button><core-icon id="other-button" icon="social:plus-one"></core-icon></paper-button>
+    <paper-button><iron-icon id="glass" icon="fa:glass"></iron-icon></paper-button>
+    <paper-button><iron-icon id="plusone" icon="social:plus-one"></iron-icon></paper-button>
 
     <some-component id="some-component"></some-component>
   </template>
   <script type="application/dart" src="ex02_app.dart"></script>
-</polymer-element>
+</dom-module>

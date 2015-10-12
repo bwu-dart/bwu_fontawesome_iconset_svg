@@ -1,5 +1,5 @@
 name: bwu_fontawesome_iconset_svg
-version: 0.2.1
+version: 0.3.0-1
 description: FontAwesome SVG icons for core-elements and paper-elements
 homepage: https://github.com/bwu-dart/bwu_fontawesome_iconset_svg
 authors:
@@ -9,25 +9,34 @@ environment:
   sdk: '>=1.0.0 <2.0.0'
 
 dependencies:
-  core_elements: ">=0.6.0 <0.8.0"
-  polymer: '>=0.15.0 <0.17.0'
+  polymer_elements: ^1.0.0-rc.2
+  polymer: ^1.0.0-rc.2
+  reflectable: ^0.3.2
+  web_components: ^0.12.0
 
 dev_dependencies:
   archive: '>=1.0.19 <2.0.0'  # for fa_upgrade
   bwu_grinder_tasks: '>=0.1.0 <0.2.0'
   grinder: '>=0.7.2 <0.8.0'
-  paper_elements: ">=0.6.0 <0.8.0"
   path: '>=1.3.5 <2.0.0' # for fa_upgrade
   test: '>=0.12.0 <0.13.0'
 
 transformers:
-- polymer:
+- web_components:
     entry_points:
     - example/example01.html
     - example/example02.html
     - example/example03.html
-    - test/all_icons_test.html
-    - test/simple_test.html
+#    - test/all_icons_test.html
+#    - test/simple_test.html
+
+- reflectable:
+    entry_points:
+    - example/example01.dart
+    - example/example02.dart
+    - example/example03.dart
+#    - test/all_icons_test.dart
+#    - test/simple_test.dart
 
 - test/pub_serve:
     $include: test/**_test{.*,}.dart

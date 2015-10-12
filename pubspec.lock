@@ -4,7 +4,7 @@ packages:
   analyzer:
     description: analyzer
     source: hosted
-    version: "0.25.2"
+    version: "0.26.1+9"
   ansicolor:
     description: ansicolor
     source: hosted
@@ -20,11 +20,11 @@ packages:
   async:
     description: async
     source: hosted
-    version: "1.2.0"
+    version: "1.3.0"
   barback:
     description: barback
     source: hosted
-    version: "0.15.2+4"
+    version: "0.15.2+7"
   browser:
     description: browser
     source: hosted
@@ -44,19 +44,15 @@ packages:
   code_transformers:
     description: code_transformers
     source: hosted
-    version: "0.2.9"
+    version: "0.2.9+4"
   collection:
     description: collection
     source: hosted
-    version: "1.1.1"
-  core_elements:
-    description: core_elements
-    source: hosted
-    version: "0.7.1+2"
+    version: "1.1.3"
   crypto:
     description: crypto
     source: hosted
-    version: "0.9.0"
+    version: "0.9.1"
   csslib:
     description: csslib
     source: hosted
@@ -64,11 +60,11 @@ packages:
   dart_style:
     description: dart_style
     source: hosted
-    version: "0.1.8+1"
+    version: "0.2.0"
   glob:
     description: glob
     source: hosted
-    version: "1.0.4"
+    version: "1.0.5"
   grinder:
     description: grinder
     source: hosted
@@ -76,7 +72,7 @@ packages:
   html:
     description: html
     source: hosted
-    version: "0.12.1+2"
+    version: "0.12.2"
   http_multi_server:
     description: http_multi_server
     source: hosted
@@ -84,15 +80,15 @@ packages:
   http_parser:
     description: http_parser
     source: hosted
-    version: "0.0.2+8"
+    version: "1.0.0"
   initialize:
     description: initialize
     source: hosted
-    version: "0.6.1"
+    version: "0.6.1+2"
   logging:
     description: logging
     source: hosted
-    version: "0.11.1"
+    version: "0.11.2"
   matcher:
     description: matcher
     source: hosted
@@ -105,18 +101,10 @@ packages:
     description: mockable_filesystem
     source: hosted
     version: "0.0.3"
-  observe:
-    description: observe
-    source: hosted
-    version: "0.13.1+1"
   package_config:
     description: package_config
     source: hosted
-    version: "0.1.1"
-  paper_elements:
-    description: paper_elements
-    source: hosted
-    version: "0.7.1+1"
+    version: "0.1.3"
   path:
     description: path
     source: hosted
@@ -128,43 +116,39 @@ packages:
   polymer:
     description: polymer
     source: hosted
-    version: "0.16.3+3"
-  polymer_expressions:
-    description: polymer_expressions
+    version: "1.0.0-rc.2"
+  polymer_elements:
+    description: polymer_elements
     source: hosted
-    version: "0.13.1"
+    version: "1.0.0-rc.2"
   polymer_interop:
     description: polymer_interop
     source: hosted
-    version: "0.1.1"
+    version: "1.0.0-rc.1"
   pool:
     description: pool
     source: hosted
-    version: "1.1.0"
+    version: "1.2.0"
   pub_semver:
     description: pub_semver
     source: hosted
-    version: "1.2.1"
-  quiver:
-    description: quiver
+    version: "1.2.2"
+  reflectable:
+    description: reflectable
     source: hosted
-    version: "0.21.4"
+    version: "0.3.2"
   shelf:
     description: shelf
     source: hosted
-    version: "0.6.2"
+    version: "0.6.3"
   shelf_static:
     description: shelf_static
     source: hosted
-    version: "0.2.2"
+    version: "0.2.3+1"
   shelf_web_socket:
     description: shelf_web_socket
     source: hosted
-    version: "0.0.1+2"
-  smoke:
-    description: smoke
-    source: hosted
-    version: "0.3.4"
+    version: "0.0.1+4"
   source_map_stack_trace:
     description: source_map_stack_trace
     source: hosted
@@ -176,27 +160,23 @@ packages:
   source_span:
     description: source_span
     source: hosted
-    version: "1.1.2"
+    version: "1.2.1"
   stack_trace:
     description: stack_trace
     source: hosted
-    version: "1.3.4"
+    version: "1.4.2"
   string_scanner:
     description: string_scanner
     source: hosted
-    version: "0.1.3+1"
+    version: "0.1.4"
   supports_color:
     description: supports_color
     source: hosted
     version: "0.1.1"
-  template_binding:
-    description: template_binding
-    source: hosted
-    version: "0.14.0+2"
   test:
     description: test
     source: hosted
-    version: "0.12.3+7"
+    version: "0.12.5"
   unscripted:
     description: unscripted
     source: hosted
@@ -208,11 +188,11 @@ packages:
   watcher:
     description: watcher
     source: hosted
-    version: "0.9.6"
+    version: "0.9.7"
   web_components:
     description: web_components
     source: hosted
-    version: "0.11.4+2"
+    version: "0.12.0+3"
   when:
     description: when
     source: hosted
@@ -224,4 +204,4 @@ packages:
   yaml:
     description: yaml
     source: hosted
-    version: "2.1.3"
+    version: "2.1.7"

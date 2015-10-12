@@ -1,3 +1,6 @@
+## 0.3.0-1
+- update to polymer 1.0.0-rc.2, polymer_elements 1.0.0-rc.2
+
 ## 0.2.1
 - Use Grinder default tasks from `bwu_grinder_tasks` instead of `bwu_utils_dev`.
 - Fix Travis build.

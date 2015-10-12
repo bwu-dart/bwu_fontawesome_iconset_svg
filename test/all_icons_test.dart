@@ -5,8 +5,8 @@ import 'package:test/test.dart';
 import 'package:polymer/polymer.dart';
 export 'package:polymer/init.dart';
 
-@whenPolymerReady
-init() {
+main() async {
+  await initPolymer();
   group('icon', () {
     test('simple', () {});
   });
