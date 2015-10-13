@@ -5,7 +5,7 @@ import 'dart:io' as io;
 import 'package:path/path.dart' as path;
 import 'package:archive/archive.dart';
 
-const newVersion = '4.3.0';
+const newVersion = '4.4.0';
 final downloadUri = Uri.parse(
     'http://fortawesome.github.io/Font-Awesome/assets/font-awesome-${newVersion}.zip');
 const libDirectoryPath = 'lib';
@@ -19,6 +19,7 @@ final varsRegExp = new RegExp(r'^\s*@fa-var-(.*)\:\s*\"\\([a-f0-9]{4})\";\s*$');
 
 //main() {
 //  upgrade();
+////  upgrade(skipDownload: true);
 //}
 
 io.Directory tempDir;

@@ -1,3 +1,6 @@
+## 0.3.0-2
+- update to FontAwesome 4.4.0
+
 ## 0.3.0-1
 - update to polymer 1.0.0-rc.2, polymer_elements 1.0.0-rc.2
 - use `@HtmlImport` (there is no `bwu-fontawesome-iconset-svg` element anymore.
