@@ -1,3 +1,6 @@
+## 0.3.0-3
+- update dependencies (Polymer 1.0.0-rc.10)
+
 ## 0.3.0-2
 - update to FontAwesome 4.4.0
 
